@@ -1,0 +1,15 @@
+.center {
+    text-align: center;
+}
+
+.title-txt {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.description-txt {
+    margin-left: 33.333%;
+    width: 33.333%;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
