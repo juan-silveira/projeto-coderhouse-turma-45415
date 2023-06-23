@@ -4,25 +4,8 @@
     place-items: center;
 }
 
-.grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-  }
-
-  .grid-item {
-    font-size: 30px;
-    text-align: center;
-  }
-
 .title-txt {
     font-family: 'Courier New', Courier, monospace;
-}
-
-.description-txt {
-    max-width: 400px;
-    border-style: solid;
-    border-radius: 10px;
-    padding: 10px;
 }
 
 .avatar {
@@ -38,8 +21,8 @@ a {
     text-decoration: none;
 }
 
-.ms-10 {
-    margin-left: 10px;
+.mt-10 {
+    margin-top: 10px;
 }
 
 .ms-2 {
