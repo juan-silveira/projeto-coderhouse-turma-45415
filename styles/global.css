@@ -1,17 +1,41 @@
 .center {
     text-align: center;
+    display: grid;
+    place-items: center;
 }
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .grid-item {
+    font-size: 30px;
+    text-align: center;
+  }
 
 .title-txt {
     font-family: 'Courier New', Courier, monospace;
 }
 
 .description-txt {
-    margin-left: 33.333%;
-    width: 33.333%;
+    max-width: 400px;
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
+}
+
+.avatar {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .ms-10 {
