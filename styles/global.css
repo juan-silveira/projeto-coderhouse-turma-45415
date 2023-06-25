@@ -17,8 +17,18 @@
     margin-bottom: 10px;
 }
 
-a {
+.redirection {
+    color: white;
     text-decoration: none;
+    transition: all 1s;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.redirection:hover {
+    color: black;
+    background-color: lightgray;
 }
 
 .mt-10 {
