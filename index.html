@@ -3,30 +3,216 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turma 45415 - Projeto Final</title>
-    <link rel="stylesheet" href="./styles/global.css">
+    <meta name="keywords" content="HTML, CSS, Javascript, Desenvolvimento Web, Coderhouse">
+    <meta name="description" content="Este é um projeto para o curso de Desenvolvimento Web da Coderhouse">
+    <link rel="stylesheet" href="styles/style.css">
+    </link>
+    <link rel="stylesheet" href="styles/menu.css">
+    </link>
+    <link rel="stylesheet" href="styles/home.css">
+    </link>
+    <link rel="icon" type="image/x-icon" href="/images/pokemon.jpeg">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pokédex - Home</title>
 </head>
 
 <body>
-    <div class="center">
-        <h1 class="title-txt">Projeto Final do curso de Desenvolvimento Web</h1>
-        <h2>Tema 5: Pokémon</h2>
-        <img src="./images/pokemon.jpeg" class="avatar">
-        <h2>Grupo 1</h2>
-        <h3>Alunos:</h3>
-        <ul>
-            <li>Juan Carlo Canhetti Postigo da Silveira</li>
-            <li>Peterson Vilela</li>
-            <li>Ayrton Matias Borges Junior</li>
-            <li>Arthur Ferreira Bonfim</li>
-        </ul>
-
-        <a class="mt-10 redirection" href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415" target="_blank"
-                rel="noopener">Repositório Github</a>
-
+    <div class="topnav" id="myTopnav">
+        <img class="logo" src="images/logo.svg">
+        <a class="active" href="./index.html">Home</a>
+        <a href="pages/about.html">Sobre</a>
+        <a href="pages/pokedex.html">Pokédex</a>
+        <a href="pages/memory.html">Jogo da Memória</a>
+        <a href="pages/who.html">Quem é esse Pokémon?</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburguerMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
 
+    <div class="main">
+        <div class="content">
+            <div class="header">
+                <h1>Pokémon em destaque:</h1>
+                <div class="topHeader">
+                    <img class="pokeSpotBg" src="/images/spotBg.svg" alt="spot background">
+                    <img class="pokeSpotImage" id="pokeImage" src="/images/charmander.png" alt="spot pokemon">
+                </div>
+
+                <div class="pokeSpot row">
+                    <div class="pokeAbout col-2">
+                        <h1 class="textAbout">Sobre:</h1>
+                        <p id="pokeDesc" class="textAbout">
+                            A chama que queima na ponta de sua cauda é uma indicação de suas emoções. A chama oscila quando CHARMANDER está se divertindo. Se o POKéMON ficar enfurecido, a chama queima ferozmente.
+                        </p>
+                    </div>
+
+                    <div id="types" class="pokeType col-2">
+                        <h1>Tipo:</h1>
+                        <span>FOGO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="games">
+                <div class="cards">
+                    <div class="cardHeader">
+                        <img class="cardImage" src="/images/pokedex.jpg" alt="pokedex">
+                    </div>
+                    <div class="cardBody">
+                        <h3>Pokédex</h3>
+                        <span>Veja os dados completos dos Pokémons!</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="cardHeader">
+                        <img class="cardImage" src="/images/memory.jpg" alt="pokedex">
+                    </div>
+                    <div class="cardBody">
+                        <h3>Jogo da memória</h3>
+                        <span>Teste sua memoria com este jogo!</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="cardHeader">
+                        <img class="cardImage" src="/images/who.jpg" alt="pokedex">
+                    </div>
+                    <div class="cardBody">
+                        <h3>Quem é este Pokémon?</h3>
+                        <span>Adivinhe qual é o Pokémon!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="downSection row">
+                <div class="contentLeft col-2">
+                    <h1>Gameplay dos Jogos do Site</h1>
+                    <p>Pokédex</p>
+                    <iframe src="https://www.youtube.com/embed/t62Fl7eynB8" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <p>Jogo da Memória</p>
+                    <iframe src="https://www.youtube.com/embed/t62Fl7eynB8" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <p>Quem é esse Pokémon?</p>
+                    <iframe src="https://www.youtube.com/embed/t62Fl7eynB8" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="contentRight col-2">
+                    <h1>Lista de Pokémons</h1>
+                    <p>Geração 1 (151 Pokemons)</p>
+                    <div class="tbContainer">
+                        <table class="pokeList">
+                            <thead>
+                                <tr class="tableHeader">
+                                    <th class="tbTLCorner">#</th>
+                                    <th>Sprite</th>
+                                    <th>Nome</th>
+                                    <th>Tipo 1</th>
+                                    <th class="tbTRCorner">Tipo 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/1.png"
+                                            alt="001"></td>
+                                    <td>Bulbasaur</td>
+                                    <td><span>Grama</span></td>
+                                    <td><span>Veneno</span></td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/2.png"
+                                            alt="002"></td>
+                                    <td>Ivysaur</td>
+                                    <td><span>Grama</span></td>
+                                    <td><span>Veneno</span></td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/3.png"
+                                            alt="003"></td>
+                                    <td>Venusaur</td>
+                                    <td><span>Grama</span></td>
+                                    <td><span>Veneno</span></td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/4.png"
+                                            alt="004"></td>
+                                    <td>Charmander</td>
+                                    <td><span>Fogo</span></td>
+                                    <td><span></span></td>
+                                </tr>
+                                <tr>
+                                    <td>005</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/5.png"
+                                            alt="005"></td>
+                                    <td>Charmeleon</td>
+                                    <td><span>Fogo</span></td>
+                                    <td><span></span></td>
+                                </tr>
+                                <tr>
+                                    <td>006</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/6.png"
+                                            alt="006"></td>
+                                    <td>Charizard</td>
+                                    <td><span>Fogo</span></td>
+                                    <td><span>Voador</span></td>
+                                </tr>
+                                <tr>
+                                    <td>007</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/7.png"
+                                            alt="007"></td>
+                                    <td>Squirtle</td>
+                                    <td><span>Água</span></td>
+                                    <td><span></span></td>
+                                </tr>
+                                <tr>
+                                    <td>008</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/8.png"
+                                            alt="008"></td>
+                                    <td>Wartortle</td>
+                                    <td><span>Água</span></td>
+                                    <td><span></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="tbBLCorner">009</td>
+                                    <td><img class="pkmnSize"
+                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/9.png"
+                                            alt="009"></td>
+                                    <td>Blastoise</td>
+                                    <td><span>Água</span></td>
+                                    <td class="tbBRCorner"><span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
+                    target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
+                <strong>CoderHouse</strong> Brasil
+            </p>
+        </footer>
+    </div>
+
+    <script src="scripts/responsive-menu.js"></script>
+    <script src="scripts/home.js"></script>
 </body>
 
 </html>
