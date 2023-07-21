@@ -1,0 +1,54 @@
+.main {
+    margin: 6rem auto auto auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    width: 80%;
+}
+
+.colLeft {
+    padding: 2rem;
+}
+
+.colRight {
+    padding: 2rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.bio {
+    padding: 2rem;
+}
+
+.inColLeft {
+    margin-right: 1rem;
+}
+
+.inColLeft img {
+    margin-top: 1rem;
+}
+
+.inColRight {
+    margin-left: 1rem;
+}
+
+.inColRight h1 {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .inColLeft img {
+        margin-left: 1rem;
+    }
+}
