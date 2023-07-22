@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Pokédex - Pokédex</title>
 </head>
-
 <body>
+    <!--
     <div class="topnav" id="myTopnav">
         <img class="logo" src="../images/logo.svg">
         <a href="../index.html">Home</a>
@@ -31,24 +31,80 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
+    -->
 
-    <div class="main">
-        <div class="content">
-
-            <h1 style="text-align: center; color: white;">Pokédex</h1>
-
+<!--Apagar style-->
+    <main class="pokedex" style="color: white;">
+        <div class="pkdxNav">
+           <button class="pkdxNav__button"><a href="#back">voltar</a></button>
+           <form action="">
+            <input type="text" name="pkmName">
+            <button type="submit">Pesquisar</button>
+           </form>
+           <button class="pkdxNav__button"><a href="#foward">avançar</a></button>            
         </div>
-            <footer>
-                <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
-                        target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
-                    <strong>CoderHouse</strong> Brasil
-                </p>
-            </footer> 
-    </div>
-
-
+        <div class="pkdxId">
+            <span>Pokeball</span>
+            <span>#???</span>
+        </div>
+        <img class="pokedex__pokeball" src="../images/pokeball.jpg" alt="pokeball">
+        <div class="cardInf">
+            <div class="cardInf__pkmStats cardInf__pkmStats--weight">
+                <p>?.? kg</p>
+                <p>Peso</p>
+            </div>
+            <div class="cardInf__pkmStats cardInf__pkmStats--height">
+                <p>?.? m</p>
+                <p>Altura</p>
+            </div>
+            <div class="cardInf__type">
+                <span>???</span>
+                <span>???</span>
+            </div>
+            <div class="cardInf__baseStats">
+                <table>
+                    <tr>
+                        <td>HP</td>
+                        <td>000</td>
+                    </tr>
+                    <tr>
+                        <td>ATK</td>
+                        <td>000</td>
+                    </tr>
+                    <tr>
+                        <td>DEF</td>
+                        <td>000</td>
+                    </tr>
+                    <tr>
+                        <td>SATK</td>
+                        <td>000</td>
+                    </tr>
+                    <tr>
+                        <td>SDEF</td>
+                        <td>000</td>
+                    </tr>
+                    <tr>
+                        <td>SPD</td>
+                        <td>000</td>
+                    </tr>
+                    <tr>
+                        <td>TOTAL</td>
+                        <td>000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+<!--
+    <footer>
+        <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
+                target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
+            <strong>CoderHouse</strong> Brasil
+        </p>
+    </footer> 
     <script src="../scripts/home.js"></script>
     <script src="../scripts/responsive-menu.js"></script>
+-->
 </body>
 
 </html>
