@@ -1,71 +1,151 @@
-.logo {
-    float: left;
+:root{
+    --white: white;
+    --dark: #333;
+    --gray: #85888C;
+    --blue: #395FA9;
+    --yellow: #FFCB05
+} /* variables*/
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin-right: 15px;
+}
+
+/* Header */
+.header{
+    background-color: var(--dark);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+/* Logo */
+.logo{
+    display: inline-block;
+}
+
+.logo__image {
     width: 5rem;
     margin: 10px 10px 0px 10px;
 }
 
-.topnav {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
+/* Nav menu */
+.nav{
     width: 100%;
-    background-color: #333;
-    z-index: 1;
-}
+    height: 100%;
+    position: fixed;
+    background-color: var(--dark);
+    overflow: hidden;
 
-.topnav a {
-    float: left;
+}
+.menu a{
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    color: var(--white);
+}
+.menu li{
+    margin-top: -15px;
+    display: block;
+    padding: 10px 15px;
+}
+.menu li:hover{
+    background-color: var(--white);
 }
 
-.topnav a:hover {
-    background-color: white;
-    color: #333;
+.menu li:hover a{
+    color: var(--dark);
+}
+.menu li.active{
+    background-color: var(--yellow);
+}
+.menu li.active a{
+    color: var(--blue);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
 }
 
-.topnav a.active {
-    background-color: #FFCB05;
-    color: #395FA9;
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 25px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
 }
 
-.topnav .icon {
+.side-menu {
     display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
 }
 
-@media screen and (max-width: 800px) {
-    .logo {
-        float: none;
+/* Responsiveness */
+@media (min-width: 800px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
     }
-
-    .topnav a:not(:first-child) {
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+    }
+    .hamb{
         display: none;
     }
-
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
 }
 
-@media screen and (max-width: 800px) {
-    .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
+@media (max-width: 799px) {
+    .menu li{
+        margin: 0px;
     }
 }

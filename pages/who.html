@@ -9,9 +9,9 @@
     <meta name="description"
         content="Você era um dos que esperava os intervalos dos episódios de Pokémon para acertar qual era o Pokémon? Venha jogar o nosso Quiz.">
     <link rel="stylesheet" href="../styles/style.css">
-    </link>
+    
     <link rel="stylesheet" href="../styles/menu.css">
-    </link>
+    
     <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,19 +19,26 @@
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <img class="logo" src="../images/logo.svg">
-        <a href="../index.html">Home</a>
-        <a href="./about.html">Sobre</a>
-        <a href="./pokedex.html">Pokédex</a>
-        <a href="./memory.html">Jogo da Memória</a>
-        <a class="active" href="./who.html">Quem é esse Pokémon?</a>
-        <a href="javascript:void(0);" class="icon" onclick="hamburguerMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">Sobre</a></li>
+                <li><a href="./pokedex.html">Pokédex</a></li>
+                <li><a href="./memory.html">Jogo da Memória</a></li>
+                <li class="active"><a href="./who.html">Quem é esse Pokémon?</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="main">
+    <main>
         <div class="content">
             <h1 style="text-align: center; color: white;">Quem é esse Pokémon?</h1>
             <div class="images" style="display: flex; justify-content: center;">
@@ -58,9 +65,8 @@
                 <strong>CoderHouse</strong> Brasil
             </p>
         </footer>
-    </div>
+    </main>
 
-    <script src="../scripts/responsive-menu.js"></script>
 </body>
 
 </html>
