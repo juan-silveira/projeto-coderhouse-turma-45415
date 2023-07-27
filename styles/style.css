@@ -25,11 +25,10 @@ footer a {
     color: #FFCB05;
 }
 
-.main {
+main {
     display: flex;
-    margin: 6rem auto auto auto;
     position: relative;
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 46px);
     justify-content: center;
     align-items: center;
 }

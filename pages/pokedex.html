@@ -8,9 +8,7 @@
     <meta name="keywords" content="Pokedex, Pokemon, Projeto, Desenvolvimento Web, Coderhouse">
     <meta name="description" content="Procure seu pokemon favorito, e veja os status dele em nossa pokedex.">
     <link rel="stylesheet" href="../styles/style.css">
-    </link>
     <link rel="stylesheet" href="../styles/menu.css">
-    </link>
     <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,25 +16,31 @@
 </head>
 <body>
 
-    <div class="topnav" id="myTopnav">
-        <img class="logo" src="../images/logo.svg">
-        <a href="../index.html">Home</a>
-        <a href="./about.html">Sobre</a>
-        <a class="active" href="./pokedex.html">Pokédex</a>
-        <a href="./memory.html">Jogo da Memória</a>
-        <a href="./who.html">Quem é esse Pokémon?</a>
-        <a href="javascript:void(0);" class="icon" onclick="hamburguerMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">Sobre</a></li>
+                <li class="active"><a href="./pokedex.html">Pokédex</a></li>
+                <li><a href="./memory.html">Jogo da Memória</a></li>
+                <li><a href="./who.html">Quem é esse Pokémon?</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!--Apagar style-->
-<div class="main">
+<main>
     <div class="container" style="color: white;">
         <div class="pkdxNav" style="display: flex;">
            <button class="pkdxNav__button"><a href="#back">voltar</a></button>
            <form action="">
-            <input type="text" name="pkmName">
+            <input type="text" name="pkmName" placeholder="Nome ou Id">
             <button type="submit">Pesquisar</button>
            </form>
            <button class="pkdxNav__button"><a href="#foward">avançar</a></button>            
@@ -112,8 +116,7 @@
         </p>
     </footer> 
 
-</div>
-    <script src="../scripts/responsive-menu.js"></script>
+</main>
 
 </body>
 

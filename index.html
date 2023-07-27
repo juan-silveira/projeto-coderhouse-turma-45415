@@ -8,11 +8,8 @@
     <meta name="keywords" content="HTML, CSS, Javascript, Desenvolvimento Web, Coderhouse">
     <meta name="description" content="Este é um projeto para o curso de Desenvolvimento Web da Coderhouse">
     <link rel="stylesheet" href="styles/style.css">
-    </link>
-    <link rel="stylesheet" href="styles/menu.css">
-    </link>
+    <link rel="stylesheet" href="styles/menu.css">  
     <link rel="stylesheet" href="styles/home.css">
-    </link>
     <link rel="icon" type="image/x-icon" href="/images/pokeball.jpg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,74 +17,91 @@
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <img class="logo" src="images/logo.svg">
-        <a class="active" href="./index.html">Home</a>
-        <a href="pages/about.html">Sobre</a>
-        <a href="pages/pokedex.html">Pokédex</a>
-        <a href="pages/memory.html">Jogo da Memória</a>
-        <a href="pages/who.html">Quem é esse Pokémon?</a>
-        <a href="javascript:void(0);" class="icon" onclick="hamburguerMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
 
-    <div class="main">
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="/pages/about.html">Sobre</a></li>
+                <li><a href="/pages/pokedex.html">Pokédex</a></li>
+                <li><a href="/pages/memory.html">Jogo da Memória</a></li>
+                <li><a href="/pages/who.html">Quem é esse Pokémon?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
         <div class="content">
-            <div class="header">
-                <h1>Pokémon em destaque:</h1>
-                <div class="topHeader">
+            <div class="main__card">
+                <div class="title">Pokémon em destaque:</div>
+                <div class="top__main__card">
                     <img class="pokeSpotBg" src="./images/spotBg.svg" alt="spot background">
                     <img class="pokeSpotImage" id="pokeImage" src="./images/charmander.png" alt="spot pokemon">
                 </div>
 
                 <div class="pokeSpot row">
-                    <div class="pokeAbout col-2">
-                        <h1 class="textAbout">Sobre:</h1>
-                        <p id="pokeDesc" class="textAbout">
+                    <div class="pkmn__about col-2">
+                        <div class="card__title">Sobre:</div>
+                        <div id="pokeDesc" class="card__text">
                             A chama que queima na ponta de sua cauda é uma indicação de suas emoções. A chama oscila quando CHARMANDER está se divertindo. Se o POKéMON ficar enfurecido, a chama queima ferozmente.
-                        </p>
+                        </div>
                     </div>
 
-                    <div id="types" class="pokeType col-2">
-                        <h1>Tipo:</h1>
-                        <span>FOGO</span>
+                    <div class="pkmn__about pokeType col-2">
+                        <div class="card__title">Tipo:</div>
+                        <div class="card__text">FOGO</div>
                     </div>
                 </div>
             </div>
 
             <div class="games">
-                <div class="cards">
-                    <div class="cardHeader">
-                        <img class="cardImage" src="./images/pokedex.jpg" alt="pokedex">
+                <a href="./pages/pokedex.html">
+                    <div class="cards">
+                        <div class="card__header">
+                            <img class="card__image" src="./images/pokedex.jpg" alt="pokedex">
+                        </div>
+                        <div class="card__body">
+                            <div class="card__title">Pokédex</div>
+                            <div class="card__text">Veja os dados completos dos Pokémons!</div>
+                        </div>
                     </div>
-                    <div class="cardBody">
-                        <h3>Pokédex</h3>
-                        <span>Veja os dados completos dos Pokémons!</span>
+                </a>
+                
+                <a href="./pages/memory.html">
+                    <div class="cards">
+                        <div class="card__header">
+                            <img class="card__image" src="./images/memory.jpg" alt="memory">
+                        </div>
+                        <div class="card__body">
+                            <div class="card__title">Jogo da memória</div>
+                            <div class="card__text">Teste sua memoria com este jogo!</div>
+                        </div>
                     </div>
-                </div>
-                <div class="cards">
-                    <div class="cardHeader">
-                        <img class="cardImage" src="./images/memory.jpg" alt="pokedex">
+                </a>
+                
+                <a href="./pages/who.html">
+                    <div class="cards">
+                        <div class="card__header">
+                            <img class="card__image" src="./images/who.jpg" alt="who">
+                        </div>
+                        <div class="card__body">
+                            <div class="card__title">Quem é este Pokémon?</div>
+                            <div class="card__text">Adivinhe qual é o Pokémon!</div>
+                        </div>
                     </div>
-                    <div class="cardBody">
-                        <h3>Jogo da memória</h3>
-                        <span>Teste sua memoria com este jogo!</span>
-                    </div>
-                </div>
-                <div class="cards">
-                    <div class="cardHeader">
-                        <img class="cardImage" src="./images/who.jpg" alt="pokedex">
-                    </div>
-                    <div class="cardBody">
-                        <h3>Quem é este Pokémon?</h3>
-                        <span>Adivinhe qual é o Pokémon!</span>
-                    </div>
-                </div>
+                </a>
+                
             </div>
             <div class="downSection row">
                 <div class="contentLeft col-2">
-                    <h1>Gameplay dos Jogos do Site</h1>
+                    <div class="title">Gameplay dos Jogos do Site</div>
                     <p>Pokédex</p>
                     <iframe src="https://www.youtube.com/embed/t62Fl7eynB8" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -102,7 +116,7 @@
                         allowfullscreen></iframe>
                 </div>
                 <div class="contentRight col-2">
-                    <h1>Lista de Pokémons</h1>
+                    <div class="title">Lista de Pokémons</div>
                     <p>Geração 1 (151 Pokemons)</p>
                     <div class="tbContainer">
                         <table class="pokeList">
@@ -209,9 +223,8 @@
                 <strong>CoderHouse</strong> Brasil
             </p>
         </footer>
-    </div>
+    </main>
 
-    <script src="scripts/responsive-menu.js"></script>
 </body>
 
 </html>
