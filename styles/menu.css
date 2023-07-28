@@ -73,7 +73,8 @@ ul{
 .hamb{
     cursor: pointer;
     float: right;
-    padding: 25px 20px;
+    transform: translate(-20px, 20px);
+    /* position: absolute; */
 }/* Style label tag */
 
 .hamb-line {
