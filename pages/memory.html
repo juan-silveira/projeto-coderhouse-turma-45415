@@ -9,6 +9,7 @@
     <meta name="description" content="Gosta de um jogo de memória? Gosta de Pokémon? Experimente nosso jogo. ">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/memory.css">
     <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,7 +22,7 @@
         <!-- Logo -->
         <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <input class="side-menu" type="checkbox" id="side-menu" />
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <!-- Menu -->
         <nav class="nav">
@@ -38,44 +39,111 @@
     <main>
         <div class="content">
             <!-- <h1 style="text-align: center; color: white;">Jogo da Memória</h1> -->
-            <div class="navBar">
-                <div class="buttons">
-                    <button>Trocar Nome</button>
-                    <button>Resetar Recorde</button>
-                    <button>Reiniciar Jogo</button>
+            <div class="nav__bar">
+                <div id="top__row">
+                    <div class="buttons">
+                        <button>Trocar Nome</button>
+                        <button>Resetar Recorde</button>
+                        <button>Reiniciar Jogo</button>
+                    </div>
                 </div>
-                <table>
-                    <tr style="color: white;">
-                        <td style="border: 3px solid white;"><strong>Jogador</strong></td>
-                        <td style="border: 3px solid white;">Tempo: <strong>00</strong></td>
-                        <td style="border: 3px solid white;">Recorde: <strong>00</strong></td>
-                    </tr>
-                </table>
+                <div class="down__row">
+                    <div class="score"><strong>Jogador</strong></div>
+                    <div class="score">Tempo: <strong>00</strong></div>
+                    <div class="score">Recorde: <strong>00</strong></div>
+                </div>    
             </div>
-            <div class="cards">
-                <div class="row">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
+
+            <div class="grid">
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png);">
+                        <div class="name">
+                            Bulbasaur
+                        </div>
+                    </div>
+                    <div class="face back"></div>
                 </div>
-                <div class="row">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png);">
+                        <div class="name">
+                            Ivysaur
+                        </div>
+                    </div>
+                    <div class="face back"></div>
                 </div>
-                <div class="row">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
-                    <img src="../images/card-back.png" alt="card" width="150px">
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png);">
+                        <div class="name">
+                            Venusaur
+                        </div>
+                    </div>
+                    <div class="face back"></div>
+                </div>
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png);">
+                        <div class="name">
+                            Charmander
+                        </div>
+                    </div>
+                    <div class="face back"></div>
+                </div>
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png);">
+                        <div class="name">
+                            Charmeleon
+                        </div>
+                    </div>
+                    <div class="face back"></div>
+                </div>
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png);">
+                        <div class="name">
+                            Charizard
+                        </div>
+                    </div>
+                    <div class="face back"></div>
+                </div>
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png);">
+                        <div class="name">
+                            Squirtle
+                        </div>
+                    </div>
+                    <div class="face back"></div>
+                </div>
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png);">
+                        <div class="name">
+                            Wartortle
+                        </div>
+                    </div>
+                    <div class="face back"></div>
+                </div>
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png);">
+                        <div class="name">
+                            Blastoise
+                        </div>
+                    </div>
+                    <div class="face back"></div>
+                </div>
+                <div class="card">
+                    <div class="face front" 
+                        style="background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png);">
+                        <div class="name">
+                            Pikachu
+                        </div>
+                    </div>
+                    <div class="face back"></div>
                 </div>
             </div>
         </div>
