@@ -34,7 +34,7 @@
 .pokeSpotImage {
     position: absolute;
     width: 35vh;
-    max-width: clamp(25%, 50%, 75%);
+    max-width: 50%;
     transform: translate(1vw, 0vh);
 }
 
