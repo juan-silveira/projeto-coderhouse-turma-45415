@@ -81,7 +81,7 @@ h1 {
 
     .whoPkm__images--who {
         position: absolute;
-        width: clamp(10%, 30%, 100%);
+        width: 30%;
     }
     .whoPkm__pkmName input {
         padding: auto;
