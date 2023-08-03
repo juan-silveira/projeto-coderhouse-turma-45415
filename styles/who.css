@@ -1,9 +1,15 @@
+.content {
+    text-align: center;
+    max-width: 90%;
+}
+
 .whoPkm {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 600px;
-    transform: translateY(-200px);
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -13,21 +19,20 @@ h1 {
 }
 
 .whoPkm__images {
-    width: 100%;
-    height: 340px;
-    text-align: center;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .whoPkm__images--whobg {
     width: 100%;
-    border-radius: 5%;
+    border-radius: 1rem;
 }
 
 .whoPkm__images--who {
+    position: absolute;
     width: 200px;
-    display: flex;
-    transform: translate(70px, -270px);
+    transform: translateX(-60%);
 }
 
 .whoPkm__pkmName {
@@ -70,4 +75,23 @@ h1 {
 
 .btn:hover , .input:hover{
     border: 2px solid #fff;
+}
+
+@media screen and (max-width: 670px) {
+
+    .whoPkm__images--who {
+        position: absolute;
+        width: clamp(10%, 30%, 100%);
+    }
+    .whoPkm__pkmName input {
+        padding: auto;
+    }    
+}
+
+@media screen and (max-width: 460px) {
+
+    h1 {
+        font-size: 7.4vw;
+    }
+
 }
