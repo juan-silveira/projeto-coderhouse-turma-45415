@@ -9,11 +9,13 @@
     <meta name="description" content="Procure seu pokemon favorito, e veja os status dele em nossa pokedex.">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/pokedex.css">
     <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Pokédex - Pokédex</title>
 </head>
+
 <body>
 
     <!-- Navigation bar -->
@@ -21,7 +23,7 @@
         <!-- Logo -->
         <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <input class="side-menu" type="checkbox" id="side-menu" />
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <!-- Menu -->
         <nav class="nav">
@@ -35,88 +37,141 @@
         </nav>
     </header>
 
-<main>
-    <div class="container" style="color: white;">
-        <div class="pkdxNav" style="display: flex;">
-           <button class="pkdxNav__button"><a href="#back">voltar</a></button>
-           <form action="">
-            <input type="text" name="pkmName" placeholder="Nome ou Id">
-            <button type="submit">Pesquisar</button>
-           </form>
-           <button class="pkdxNav__button"><a href="#foward">avançar</a></button>            
+    <main>
+        <div id="controls">
+            <button class="button btn-prev"><i class="fa fa-arrow-left"></i></button>
+            <form autocomplete="off" class="form">
+                <div class="autocomplete">
+                    <input type="search" id="search" placeholder="Digite o nome ou id" required />
+                </div>
+                <button class="button-submit" type="submit"><i class='fa fa-search'></i></button>
+            </form>
+            <button class="button btn-next"><i class="fa fa-arrow-right"></i></button>
         </div>
-        <div class="pkdxId" style="display: flex; justify-content: space-between;">
-            <span>Pokeball</span>
-            <span>#???</span>
-        </div>
-        <div class="image" style="display: flex; justify-content: center;">
-        <img class="pokedex__pokeball" src="../images/pokeball.jpg" alt="pokeball" width="200px">
-    </div>
-        <div class="cardInf">
-            <div class="bmi" style="display: flex; justify-content: space-between;">
-            <div class="cardInf__pkmStats cardInf__pkmStats--weight">
-                <p>?.? kg</p>
-                <p>Peso</p>
+        <div id="pokedex">
+            <div id="top">
+                <div id="top-bar">
+                    <span id="pokemon-name">Pokeball</span>
+                    <span id="number">#???</span>
+                </div>
+                <div id="poke-image-placeholder">
+                    <img src="../images/pokeball.jpg" id="pokemon-image" alt="pokemon-image" />
+                </div>
             </div>
-            <div class="cardInf__pkmStats cardInf__pkmStats--height">
-                <p>?.? m</p>
-                <p>Altura</p>
-            </div>
-        </div>
-            <div class="cardInf__type" style="text-align: center;">
-                <span>???</span>
-                <span>???</span>
-            </div>
-            <div class="cardInf__baseStats">
-                <table>
-                    <tr>
-                        <td>HP</td>
-                        <td>000</td>
-                        <td style="width: 300px;"><hr></td>
-                    </tr>
-                    <tr>
-                        <td>ATK</td>
-                        <td>000</td>
-                        <td style="width: 300px;"><hr></td>
-                    </tr>
-                    <tr>
-                        <td>DEF</td>
-                        <td>000</td>
-                        <td style="width: 300px;"><hr></td>
-                    </tr>
-                    <tr>
-                        <td>SATK</td>
-                        <td>000</td>
-                        <td style="width: 300px;"><hr></td>
-                    </tr>
-                    <tr>
-                        <td>SDEF</td>
-                        <td>000</td>
-                        <td style="width: 300px;"><hr></td>
-                    </tr>
-                    <tr>
-                        <td>SPD</td>
-                        <td>000</td>
-                        <td style="width: 300px;"><hr></td>
-                    </tr>
-                    <tr>
-                        <td>TOTAL</td>
-                        <td>000</td>
-                        <td style="width: 300px;"><hr></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
 
-    <footer>
-        <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
-                target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
-            <strong>CoderHouse</strong> Brasil
-        </p>
-    </footer> 
+            <div id="data">
+                <div class="stat-row">
+                    <div class="stat-bmi">
+                        <div class="stat-weight">
+                            <span id="weight">?.?</span>
+                            <span>kg</span>
+                            <div class="icon">
+                                <i class="fa fa-weight-hanging"></i>
+                                <smaller>Peso</smaller>
+                            </div>
+                        </div>
 
-</main>
+                        <div class="stat-height">
+                            <span id="height">?.?</span>
+                            <span>m</span>
+                            <div class="icon">
+                                <smaller>Altura</smaller>
+                                <i class="fa fa-ruler-vertical icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="all-stats">
+
+
+                    <div id="types">
+                        <span style="background-color: rgb(0, 0, 0);" class="type">
+                            ???
+                        </span>
+                        <span style="background-color: rgb(0, 0, 0);" class="type">
+                            ???
+                        </span>
+                    </div>
+
+                    <h4 id="base-stats" style="color: rgb(0, 0, 0);">Base Stats</h4>
+
+                    <div id="stats">
+                        <div class="stat-row">
+                            <div class="stat-desc">HP</div>
+                            <div class="stat-number">000</div>
+                            <div class="stat-bar">
+                                <div class="bar-outer">
+                                    <div class="bar-inner" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-desc">ATK</div>
+                            <div class="stat-number">000</div>
+                            <div class="stat-bar">
+                                <div class="bar-outer">
+                                    <div class="bar-inner" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-desc">DEF</div>
+                            <div class="stat-number">000</div>
+                            <div class="stat-bar">
+                                <div class="bar-outer">
+                                    <div class="bar-inner" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-desc">SATK</div>
+                            <div class="stat-number">000</div>
+                            <div class="stat-bar">
+                                <div class="bar-outer">
+                                    <div class="bar-inner" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-desc">SDEF</div>
+                            <div class="stat-number">000</div>
+                            <div class="stat-bar">
+                                <div class="bar-outer">
+                                    <div class="bar-inner" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-desc">SPD</div>
+                            <div class="stat-number">000</div>
+                            <div class="stat-bar">
+                                <div class="bar-outer">
+                                    <div class="bar-inner" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-total">TOTAL</div>
+                            <div class="stat-number stat-tnumber">000</div>
+                            <div class="stat-bar">
+                                <div class="bar-outer" id="bar-touter">
+                                    <div class="bar-inner" id="bar-tinner" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
+                    target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
+                <strong>CoderHouse</strong> Brasil
+            </p>
+        </footer>
+
+    </main>
 
 </body>
 
