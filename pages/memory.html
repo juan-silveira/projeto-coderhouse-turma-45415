@@ -22,11 +22,11 @@
         <!-- Logo -->
         <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu" />
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <input class="side__menu" type="checkbox" id="side-menu"/>
+        <label class="hamburguer" for="side-menu"><span class="hamburguer__line"></span></label>
         <!-- Menu -->
         <nav class="nav">
-            <ul class="menu">
+            <ul class="nav__menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./about.html">Sobre</a></li>
                 <li><a href="./pokedex.html">Pokédex</a></li>
@@ -36,15 +36,15 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main">
         <div class="content">
-            <!-- <h1 style="text-align: center; color: white;">Jogo da Memória</h1> -->
+            <!-- <h1 style="text-align: center; color: var(--white);">Jogo da Memória</h1> -->
             <div class="nav__bar">
                 <div id="top__row">
                     <div class="buttons">
-                        <button>Trocar Nome</button>
-                        <button>Resetar Recorde</button>
-                        <button>Reiniciar Jogo</button>
+                        <button class="score__button">Trocar Nome</button>
+                        <button class="score__button">Resetar Recorde</button>
+                        <button class="score__button">Reiniciar Jogo</button>
                     </div>
                 </div>
                 <div class="down__row">
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <footer>
+        <footer class="footer">
             <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
                     target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
                 <strong>CoderHouse</strong> Brasil

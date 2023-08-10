@@ -21,13 +21,13 @@
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
-        <a href="#" class="logo"><img class="logo__image" src="images/logo.svg" alt="logo"></a>
+        <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <input class="side__menu" type="checkbox" id="side-menu"/>
+        <label class="hamburguer" for="side-menu"><span class="hamburguer__line"></span></label>
         <!-- Menu -->
         <nav class="nav">
-            <ul class="menu">
+            <ul class="nav__menu">
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="pages/about.html">Sobre</a></li>
                 <li><a href="pages/pokedex.html">Pokédex</a></li>
@@ -37,26 +37,26 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main">
         <div class="content">
             <div class="main__card">
-                <div class="title">Pokémon em destaque:</div>
+                <p class="title">Pokémon em destaque:</p>
                 <div class="top__main__card">
                     <img class="pokeSpotBg" src="images/spotBg.svg" alt="spot background">
                     <img class="pokeSpotImage" id="pokeImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="spot pokemon">
                 </div>
 
                 <div class="pokeSpot row">
-                    <div class="pkmn__about col-2">
-                        <div class="card__title">Sobre:</div>
-                        <div id="pokeDesc" class="card__text">
+                    <div class="mt-2 col-2">
+                        <p class="card__title">Sobre:</p>
+                        <p id="pokeDesc" class="card__text">
                             A chama que queima na ponta de sua cauda é uma indicação de suas emoções. A chama oscila quando CHARMANDER está se divertindo. Se o POKéMON ficar enfurecido, a chama queima ferozmente.
-                        </div>
+                        </p>
                     </div>
 
-                    <div class="pkmn__about pokeType col-2">
-                        <div class="card__title">Tipo:</div>
-                        <div class="card__text">FOGO</div>
+                    <div class="mt-2 text-center col-2">
+                        <p class="card__title">Tipo:</p>
+                        <span class="type__badge type__fire text-white">FOGO</span>
                     </div>
                 </div>
             </div>
@@ -94,29 +94,26 @@
                     </div>
                 
             </div>
-            <div class="downSection row">
-                <div class="contentLeft col-2">
-                    <div class="title">Gameplay dos Jogos do Site</div>
-                    <p>Pokédex</p>
-                    <iframe src="https://www.youtube.com/embed/t62Fl7eynB8" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            <div class="downSection d-flex my-2 text-white text-center">
+                <div class="video col-2">
+                    <p class="title">Gameplay dos Jogos do Site</p>
+                    <p class="mb-1">Pokédex</p>
+                    <iframe class="mb-1" src="./images/pokedex.mp4" title="Pokedex" frameborder="0"
                         allowfullscreen></iframe>
-                    <p>Jogo da Memória</p>
-                    <iframe src="https://www.youtube.com/embed/t62Fl7eynB8" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    <p class="mb-1">Jogo da Memória</p>
+                    <iframe class="mb-1" src="./images/memory.mp4" title="Memory Game" frameborder="0"
                         allowfullscreen></iframe>
-                    <p>Quem é esse Pokémon?</p>
-                    <iframe src="https://www.youtube.com/embed/t62Fl7eynB8" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    <p class="mb-1">Quem é esse Pokémon?</p>
+                    <iframe class="" src="./images/who.mp4" title="Who's that pokemon?" frameborder="0"
                         allowfullscreen></iframe>
                 </div>
-                <div class="contentRight col-2">
-                    <div class="title">Lista de Pokémons</div>
+                <div class="col-2">
+                    <p class="title">Lista de Pokémons</p>
                     <p>Geração 1 (151 Pokemons)</p>
                     <div class="tbContainer">
-                        <table class="pokeList">
+                        <table class="table">
                             <thead>
-                                <tr class="tableHeader">
+                                <tr class="table__header">
                                     <th>#</th>
                                     <th>Sprite</th>
                                     <th>Nome</th>
@@ -124,86 +121,86 @@
                                     <th>Tipo 2</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="table__body">
                                 <tr>
                                     <td>001</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/1.png"
                                             alt="001"></td>
                                     <td>Bulbasaur</td>
-                                    <td><span>Grama</span></td>
-                                    <td><span>Veneno</span></td>
+                                    <td><span class="type__badge type__grass">Grama</span></td>
+                                    <td><span class="type__badge type__poison">Veneno</span></td>
                                 </tr>
                                 <tr>
                                     <td>002</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/2.png"
                                             alt="002"></td>
                                     <td>Ivysaur</td>
-                                    <td><span>Grama</span></td>
-                                    <td><span>Veneno</span></td>
+                                    <td><span class="type__badge type__grass">Grama</span></td>
+                                    <td><span class="type__badge type__poison">Veneno</span></td>
                                 </tr>
                                 <tr>
                                     <td>003</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/3.png"
                                             alt="003"></td>
                                     <td>Venusaur</td>
-                                    <td><span>Grama</span></td>
-                                    <td><span>Veneno</span></td>
+                                    <td><span class="type__badge type__grass">Grama</span></td>
+                                    <td><span class="type__badge type__poison">Veneno</span></td>
                                 </tr>
                                 <tr>
                                     <td>004</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/4.png"
                                             alt="004"></td>
                                     <td>Charmander</td>
-                                    <td><span>Fogo</span></td>
+                                    <td><span class="type__badge type__fire">Fogo</span></td>
                                     <td><span></span></td>
                                 </tr>
                                 <tr>
                                     <td>005</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/5.png"
                                             alt="005"></td>
                                     <td>Charmeleon</td>
-                                    <td><span>Fogo</span></td>
+                                    <td><span class="type__badge type__fire">Fogo</span></td>
                                     <td><span></span></td>
                                 </tr>
                                 <tr>
                                     <td>006</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/6.png"
                                             alt="006"></td>
                                     <td>Charizard</td>
-                                    <td><span>Fogo</span></td>
-                                    <td><span>Voador</span></td>
+                                    <td><span class="type__badge type__fire">Fogo</span></td>
+                                    <td><span class="type__badge type__flying">Voador</span></td>
                                 </tr>
                                 <tr>
                                     <td>007</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/7.png"
                                             alt="007"></td>
                                     <td>Squirtle</td>
-                                    <td><span>Água</span></td>
+                                    <td><span class="type__badge type__water">Água</span></td>
                                     <td><span></span></td>
                                 </tr>
                                 <tr>
                                     <td>008</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/8.png"
                                             alt="008"></td>
                                     <td>Wartortle</td>
-                                    <td><span>Água</span></td>
+                                    <td><span class="type__badge type__water">Água</span></td>
                                     <td><span></span></td>
                                 </tr>
                                 <tr>
                                     <td>009</td>
-                                    <td><img class="pkmnSize"
+                                    <td><img class="table__image"
                                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/9.png"
                                             alt="009"></td>
                                     <td>Blastoise</td>
-                                    <td><span>Água</span></td>
+                                    <td><span class="type__badge type__water">Água</span></td>
                                     <td><span></span></td>
                                 </tr>
                             </tbody>
@@ -212,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <footer>
+        <footer class="footer">
             <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
                     target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
                 <strong>CoderHouse</strong> Brasil

@@ -9,10 +9,10 @@
     <meta name="description"
         content="Você era um dos que esperava os intervalos dos episódios de Pokémon para acertar qual era o Pokémon? Venha jogar o nosso Quiz.">
     <link rel="stylesheet" href="../styles/style.css">
-    
+
     <link rel="stylesheet" href="../styles/menu.css">
     <link rel="stylesheet" href="../styles/who.css">
-    
+
     <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,11 +25,11 @@
         <!-- Logo -->
         <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <input class="side__menu" type="checkbox" id="side-menu" />
+        <label class="hamburguer" for="side-menu"><span class="hamburguer__line"></span></label>
         <!-- Menu -->
         <nav class="nav">
-            <ul class="menu">
+            <ul class="nav__menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./about.html">Sobre</a></li>
                 <li><a href="./pokedex.html">Pokédex</a></li>
@@ -39,29 +39,28 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main">
         <div class="content">
-        <h1>Quem é esse Pokémon?</h1>
-        <div class="whoPkm">
-            <div class="whoPkm__images">
-                <img class="whoPkm__images--whobg" src="../images/whobg.png" alt="who">
-                <img class="whoPkm__images--who" src="../images/who.png" alt="?">
-            </div>
-            <form class="whoPkm__pkmName" action="">
-                <input class="input" type="text" placeholder="Digite o nome do Pokémon">
-            </form>
-            <div class="whoPkm__dontKnowPkm">
-                <button class="btn">Não sei qual é o pokemon!</button>
-            </div>
-            <div class="whoPkm__tips">
-                <button class="btn">Dica 1</button>
-                <button class="btn">Dica 2</button>
-                <button class="btn">Dica 3</button>
-            </div>
+            <span class="content__title"><strong>Quem é esse Pokémon?</strong></span>
+            <div class="whoPkm">
+                <div class="whoPkm__images">
+                    <img class="whoPkm__images__whobg" src="../images/whobg.png" alt="who">
+                    <img class="whoPkm__images__who" src="../images/who.png" alt="?">
+                </div>
+                <form class="whoPkm__pkmName" action="">
+                    <input class="input" type="text" placeholder="Digite o nome do Pokémon">
+                </form>
+                <div class="whoPkm__dontKnowPkm">
+                    <button class="button">Não sei qual é o pokemon!</button>
+                </div>
+                <div class="whoPkm__tips">
+                    <button class="button">Dica 1</button>
+                    <button class="button">Dica 2</button>
+                    <button class="button">Dica 3</button>
+                </div>
             </div>
         </div>
-    </div>
-        <footer>
+        <footer class="footer">
             <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
                     target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
                 <strong>CoderHouse</strong> Brasil

@@ -1,9 +1,9 @@
 .main__card {
     margin-top: 3rem;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 10px;
     padding: 1rem;
-    color: #333;
+    color: var(--darkGray);
 }
 
 .top__main__card {
@@ -16,7 +16,7 @@
 }
 
 .title {
-    font-size: 30px;
+    font-size: 24px;
     margin: 1rem 0;
     font-weight: bold;
 }
@@ -38,20 +38,12 @@
     transform: translate(1vw, 0vh);
 }
 
-.pkmn__about {
-    margin-top: 2rem;
-}
-
 .typeBadge {
-    color: white;
+    color: var(--white);
     font-size: small;
     font-weight: 400;
     padding: 5px 10px;
     border-radius: 20px;
-}
-
-.pokeType {
-    text-align: center;
 }
 
 .games {
@@ -62,7 +54,7 @@
 }
 
 .cards {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 20px 20px 10px 10px;
     gap: 2rem;
     cursor: pointer;
@@ -78,7 +70,7 @@
 .card__body {
     text-align: center;
     padding: 1rem;
-    color: #333;
+    color: var(--darkGray);
 }
 
 .card__title {
@@ -87,19 +79,9 @@
     margin-bottom: 1rem;
 }
 
-.card__text {
+/* .card__text {
     margin-top: auto;
-}
-
-.downSection {
-    margin: 2rem 0;
-    text-align: center;
-    color: white;
-}
-
-.contentLeft {
-    margin-right: 2rem;
-}
+} */
 
 .tbContainer {
     display: flex;
@@ -109,51 +91,45 @@
     overflow-y: auto;
 }
 
-.pokeList {
+.table {
     width: 100%;
     margin-top: 1rem;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 10px;
 }
 
-.pokeList td {
+.table td {
     height: 3rem;
-    background-color: #1d1d2e;
+    background-color: var(--darkBlue);
 }
 
-.tableHeader {
-    background-color: #333;
+.table__header {
+    background-color: var(--darkGray);
 }
 
-.tableHeader th:first-child {
+.table__header th:first-child {
     border-top-left-radius: 10px;
 }
 
-.tableHeader th:last-child {
+.table__header th:last-child {
     border-top-right-radius: 10px;
 }
 
-tbody tr:last-child td:first-child {
+.table__body tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
 }
 
-tbody tr:last-child td:last-child {
+.table__body tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-.pkmnSize {
+.table__image {
     width: 50px;
 }
 
 .pkmnName {
     text-transform: capitalize;
 }
-
-iframe {
-    width: 100%;
-    max-width: 350px;
-}
-
 
 @media screen and (max-width: 915px) {
 
@@ -175,11 +151,13 @@ iframe {
         padding-bottom: 4rem;
     }
 
-    h1 {
-        font-size: 1.2rem;
+    .row {
+        display: block;
     }
 
-    .pokeType h1 {
-        text-align: start;
+    .col-2,
+    .col-3,
+    .col-4 {
+        flex: 100%;
     }
 }
