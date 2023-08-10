@@ -1,11 +1,3 @@
-:root{
-    --white: white;
-    --dark: #333;
-    --gray: #85888C;
-    --blue: #395FA9;
-    --yellow: #FFCB05
-} /* variables*/
-
 a{
     text-decoration: none;
 }
@@ -16,7 +8,7 @@ ul{
 
 /* Header */
 .header{
-    background-color: var(--dark);
+    background-color: var(--darkGray);
     box-shadow: 1px 1px 5px 0px var(--gray);
     position: sticky;
     top: 0;
@@ -38,46 +30,43 @@ ul{
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: var(--dark);
+    background-color: var(--darkGray);
     overflow: hidden;
-
+    transition: max-height .5s ease-out;
+    max-height: 0;
 }
-.menu a{
+
+.nav__menu a{
     display: block;
     color: var(--white);
 }
-.menu li{
-    margin-top: -15px;
+.nav__menu li{
     display: block;
     padding: 10px 15px;
 }
-.menu li:hover{
+.nav__menu li:hover{
     background-color: var(--white);
 }
 
-.menu li:hover a{
-    color: var(--dark);
+.nav__menu li:hover a{
+    color: var(--darkGray);
 }
-.menu li.active{
+.nav__menu li.active{
     background-color: var(--yellow);
 }
-.menu li.active a{
+.nav__menu li.active a{
     color: var(--blue);
-}
-.nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
 }
 
 /* Menu Icon */
-.hamb{
+.hamburguer{
     cursor: pointer;
     float: right;
     transform: translate(-20px, 20px);
     /* position: absolute; */
 }/* Style label tag */
 
-.hamb-line {
+.hamburguer__line {
     background: var(--white);
     display: block;
     height: 2px;
@@ -86,8 +75,8 @@ ul{
 
 } /* Style span tag */
 
-.hamb-line::before,
-.hamb-line::after{
+.hamburguer__line::before,
+.hamburguer__line::after{
     background: var(--white);
     content: '';
     display: block;
@@ -96,29 +85,29 @@ ul{
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+.hamburguer__line::before{
     top: 5px;
 }
-.hamb-line::after{
+.hamburguer__line::after{
     top: -5px;
 }
 
-.side-menu {
+.side__menu {
     display: none;
 } /* Hide checkbox */
 
 /* Toggle menu icon */
-.side-menu:checked ~ nav{
+.side__menu:checked ~ nav{
     max-height: 100%;
 }
-.side-menu:checked ~ .hamb .hamb-line {
+.side__menu:checked ~ .hamburguer .hamburguer__line {
     background: transparent;
 }
-.side-menu:checked ~ .hamb .hamb-line::before {
+.side__menu:checked ~ .hamburguer .hamburguer__line::before {
     transform: rotate(-45deg);
     top:0;
 }
-.side-menu:checked ~ .hamb .hamb-line::after {
+.side__menu:checked ~ .hamburguer .hamburguer__line::after {
     transform: rotate(45deg);
     top:0;
 }
@@ -133,20 +122,20 @@ ul{
         width: fit-content;
         background-color: transparent;
     }
-    .menu li{
+    .nav__menu li{
         float: left;
     }
-    .menu a:hover{
+    .nav__menu a:hover{
         background-color: transparent;
         color: var(--gray);
     }
-    .hamb{
+    .hamburguer{
         display: none;
     }
 }
 
 @media (max-width: 799px) {
-    .menu li{
+    .nav__menu li{
         margin: 0px;
     }
 }

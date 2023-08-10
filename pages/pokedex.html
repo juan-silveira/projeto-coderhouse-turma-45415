@@ -23,11 +23,11 @@
         <!-- Logo -->
         <a href="#" class="logo"><img class="logo__image" src="../images/logo.svg" alt="logo"></a>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu" />
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <input class="side__menu" type="checkbox" id="side-menu"/>
+        <label class="hamburguer" for="side-menu"><span class="hamburguer__line"></span></label>
         <!-- Menu -->
         <nav class="nav">
-            <ul class="menu">
+            <ul class="nav__menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./about.html">Sobre</a></li>
                 <li class="active"><a href="./pokedex.html">Pokédex</a></li>
@@ -37,125 +37,126 @@
         </nav>
     </header>
 
-    <main>
-        <div id="controls">
-            <button class="button btn-prev"><i class="fa fa-arrow-left"></i></button>
-            <form autocomplete="off" class="form">
-                <div class="autocomplete">
-                    <input type="search" id="search" placeholder="Digite o nome ou id" required />
-                </div>
-                <button class="button-submit" type="submit"><i class='fa fa-search'></i></button>
-            </form>
-            <button class="button btn-next"><i class="fa fa-arrow-right"></i></button>
-        </div>
-        <div id="pokedex">
-            <div id="top">
-                <div id="top-bar">
-                    <span id="pokemon-name">Pokeball</span>
-                    <span id="number">#???</span>
-                </div>
-                <div id="poke-image-placeholder">
-                    <img src="../images/pokeball.jpg" id="pokemon-image" alt="pokemon-image" />
-                </div>
+    <main class="main">
+        <div class="pokedex">
+            <div class="pokedex__header">
+                <button class="button button__prev"><i class="fa fa-arrow-left"></i></button>
+                <form autocomplete="off" class="form">
+                    <div class="form__autocomplete">
+                        <input class="form__search" type="search" id="search" placeholder="Digite o nome ou id"
+                            required />
+                    </div>
+                    <button class="button__submit" type="submit"><i class='fa fa-search'></i></button>
+                </form>
+                <button class="button button__next"><i class="fa fa-arrow-right"></i></button>
             </div>
+            <div class="pokedex__body">
+                <div class="pokedex__body__top">
+                    <div class="pokedex__body__top__info">
+                        <span class="pokedex__body__top__info__pokemonName">Pokeball</span>
+                        <span class="pokedex__body__top__info__pokemonNumber">#???</span>
+                    </div>
+                    <div class="pokedex__image">
+                        <img src="../images/pokeball.jpg" class="pokedex__image__pokemonImage" id="pokemon-image"
+                            alt="pokemon-image" />
+                    </div>
+                </div>
 
-            <div id="data">
-                <div class="stat-row">
-                    <div class="stat-bmi">
-                        <div class="stat-weight">
-                            <span id="weight">?.?</span>
-                            <span>kg</span>
-                            <div class="icon">
-                                <i class="fa fa-weight-hanging"></i>
-                                <smaller>Peso</smaller>
+                <div class="pokedex__body__stats">
+                    <div class="d-flex">
+                        <div class="stats__top">
+                            <div class="stats__top__weight">
+                                <span id="weight">?.?</span>
+                                <span>kg</span>
+                                <div class="icon">
+                                    <i class="fa fa-weight-hanging"></i>
+                                    <smaller>Peso</smaller>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="stat-height">
-                            <span id="height">?.?</span>
-                            <span>m</span>
-                            <div class="icon">
-                                <smaller>Altura</smaller>
-                                <i class="fa fa-ruler-vertical icon"></i>
+                            <div class="stats__top__height">
+                                <span id="height">?.?</span>
+                                <span>m</span>
+                                <div class="icon">
+                                    <smaller>Altura</smaller>
+                                    <i class="fa fa-ruler-vertical icon"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="all-stats">
 
-
-                    <div id="types">
-                        <span style="background-color: rgb(0, 0, 0);" class="type">
+                    <div class="pokemon__types">
+                        <span class="pokemon__types__type">
                             ???
                         </span>
-                        <span style="background-color: rgb(0, 0, 0);" class="type">
+                        <span class="pokemon__types__type">
                             ???
                         </span>
                     </div>
 
-                    <h4 id="base-stats" style="color: rgb(0, 0, 0);">Base Stats</h4>
-
-                    <div id="stats">
-                        <div class="stat-row">
-                            <div class="stat-desc">HP</div>
-                            <div class="stat-number">000</div>
-                            <div class="stat-bar">
-                                <div class="bar-outer">
-                                    <div class="bar-inner" style="width: 0%"></div>
+                    <div class="stats__body">
+                        <h4 class="stats__body__title">Base Stats</h4>
+                        <div class="stats__body__allStats">
+                            <div class="d-flex">
+                                <div class="stat__description">HP</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="stat-row">
-                            <div class="stat-desc">ATK</div>
-                            <div class="stat-number">000</div>
-                            <div class="stat-bar">
-                                <div class="bar-outer">
-                                    <div class="bar-inner" style="width: 0%"></div>
+                            <div class="d-flex">
+                                <div class="stat__description">ATK</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="stat-row">
-                            <div class="stat-desc">DEF</div>
-                            <div class="stat-number">000</div>
-                            <div class="stat-bar">
-                                <div class="bar-outer">
-                                    <div class="bar-inner" style="width: 0%"></div>
+                            <div class="d-flex">
+                                <div class="stat__description">DEF</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="stat-row">
-                            <div class="stat-desc">SATK</div>
-                            <div class="stat-number">000</div>
-                            <div class="stat-bar">
-                                <div class="bar-outer">
-                                    <div class="bar-inner" style="width: 0%"></div>
+                            <div class="d-flex">
+                                <div class="stat__description">SATK</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="stat-row">
-                            <div class="stat-desc">SDEF</div>
-                            <div class="stat-number">000</div>
-                            <div class="stat-bar">
-                                <div class="bar-outer">
-                                    <div class="bar-inner" style="width: 0%"></div>
+                            <div class="d-flex">
+                                <div class="stat__description">SDEF</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="stat-row">
-                            <div class="stat-desc">SPD</div>
-                            <div class="stat-number">000</div>
-                            <div class="stat-bar">
-                                <div class="bar-outer">
-                                    <div class="bar-inner" style="width: 0%"></div>
+                            <div class="d-flex">
+                                <div class="stat__description">SPD</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="stat-row">
-                            <div class="stat-total">TOTAL</div>
-                            <div class="stat-number stat-tnumber">000</div>
-                            <div class="stat-bar">
-                                <div class="bar-outer" id="bar-touter">
-                                    <div class="bar-inner" id="bar-tinner" style="width: 0%"></div>
+                            <div class="d-flex">
+                                <div class="stat__total">TOTAL</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer"">
+                                        <div class=" stat__bar__inner"></div>
                                 </div>
                             </div>
                         </div>
@@ -163,16 +164,15 @@
                 </div>
             </div>
         </div>
+        </div>
 
-        <footer>
+        <footer class="footer">
             <p>Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
                     target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
                 <strong>CoderHouse</strong> Brasil
             </p>
         </footer>
-
     </main>
-
 </body>
 
 </html>

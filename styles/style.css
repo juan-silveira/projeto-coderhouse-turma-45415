@@ -1,30 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root{
+    /* Color variables*/
+    --white: white;
+    --darkBlue: #1d1d2e;
+    --darkGray: #333;
+    --gray: #85888C;
+    --blue: #395FA9;
+    --yellow: #FFCB05
+
+    /* Pokemon Type color variables*/
+    --rock: rgb(182, 158, 49);
+    --ghost: rgb(112, 85, 155);
+    --steel: rgb(183, 185, 208);
+    --water: rgb(100, 147, 235);
+    --grass: rgb(116, 203, 72);
+    --psychic: rgb(251, 85, 132);
+    --ice: rgb(154, 214, 223);
+    --dark: rgb(117, 87, 76);
+    --fairy: rgb(230, 158, 172);
+    --normal: rgb(170, 166, 127);
+    --fighting: rgb(193, 34, 57);
+    --flying: rgb(168, 145, 236);
+    --poison: rgb(164, 62, 158);
+    --ground: rgb(222, 193, 107);
+    --bug: rgb(167, 183, 35);
+    --fire: rgb(245, 125, 49);
+    --electric: rgb(249, 207, 48);
+    --dragon: rgb(112, 55, 255);
+} 
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #1d1d2e;
-    margin: 0;
+    background-color: var(--darkBlue);
 }
 
-footer {
+.footer {
     width: 100%;
-    background-color: #333;
-    color: white;
+    background-color: var(--darkGray);
+    color: var(--white);
     text-align: center;
     font-size: 10px;
     position: absolute;
+    padding: 10px 0;
     bottom: 0;
 }
 
-footer a {
+.footer a {
     color: #FFCB05;
 }
 
-main {
+.main {
     display: flex;
     position: relative;
     min-height: calc(100vh - 46px);
@@ -37,7 +69,7 @@ main {
     width: 90%;
 }
 
-.row {
+.d-flex {
     display: flex;
 }
 
@@ -57,15 +89,63 @@ main {
     margin-top: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+.mt-2 {
+    margin-top: 2rem;
+}
 
-    .row {
-        display: block;
-    }
+.mb-1 {
+    margin-bottom: 1rem;
+}
 
-    .col-2,
-    .col-3,
-    .col-4 {
-        flex: 100%;
-    }
+.ms-1 {
+    margin-left: 1rem;
+}
+
+.me-1 {
+    margin-right: 1rem;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.type__badge {
+    padding: .2rem .3rem;
+    border-radius: 5px;
+}
+
+.type__water{
+    background-color: var(--water);
+}
+
+.type__grass{
+    background-color: var(--grass);
+}
+
+.type__poison{
+    background-color: var(--poison);
+}
+
+.type__flying{
+    background-color: var(--flying);
+}
+
+.type__fire{
+    background-color: var(--fire);
 }

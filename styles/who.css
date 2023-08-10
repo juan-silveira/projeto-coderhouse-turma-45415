@@ -3,6 +3,11 @@
     max-width: 90%;
 }
 
+.content__title {
+    font-size: 34px;
+    color: #fff;
+}
+
 .whoPkm {
     display: flex;
     flex-direction: column;
@@ -13,23 +18,18 @@
     text-align: center;
 }
 
-h1 {
-    font-size: 34px;
-    color: #fff;
-}
-
 .whoPkm__images {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.whoPkm__images--whobg {
+.whoPkm__images__whobg {
     width: 100%;
     border-radius: 1rem;
 }
 
-.whoPkm__images--who {
+.whoPkm__images__who {
     position: absolute;
     width: 200px;
     transform: translateX(-60%);
@@ -40,7 +40,7 @@ h1 {
     margin-bottom: 10px ;
 }
 
-.whoPkm__pkmName input {
+.whoPkm__pkmName .input {
     width: 100%;
     font-size: 24px;
     padding: 10px;
@@ -52,7 +52,7 @@ h1 {
     margin-bottom: 20px ;
 }
 
-.whoPkm__dontKnowPkm button {
+.whoPkm__dontKnowPkm .button {
     width: 100%;
     font-size: 16px;
     padding: 10px;
@@ -66,20 +66,20 @@ h1 {
 
 }
 
-.whoPkm__tips button {
+.whoPkm__tips .button {
     width: 30%;
     font-size: 16px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.btn:hover , .input:hover{
+.button:hover , .input:hover{
     border: 2px solid #fff;
 }
 
 @media screen and (max-width: 670px) {
 
-    .whoPkm__images--who {
+    .whoPkm__images__who {
         position: absolute;
         width: 30%;
     }
@@ -90,7 +90,7 @@ h1 {
 
 @media screen and (max-width: 460px) {
 
-    h1 {
+    .content__title {
         font-size: 7.4vw;
     }
 

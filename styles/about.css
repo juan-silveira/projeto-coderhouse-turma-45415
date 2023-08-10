@@ -1,44 +1,24 @@
-.main {
-    margin: 6rem auto auto auto;
-}
-
 .content {
     display: grid;
     grid-template-columns: auto auto;
-    color: white;
-    width: 80%;
+    color: var(--white);
 }
 
-.colLeft {
-    padding: 2rem;
-}
-
-.colRight {
-    padding: 2rem;
-}
-
-.center {
-    text-align: center;
-}
-
-.bio {
-    padding: 2rem;
-}
-
-.inColLeft {
-    margin-right: 1rem;
-}
-
-.inColLeft img {
-    margin-top: 1rem;
-}
-
-.inColRight {
-    margin-left: 1rem;
-}
-
-.inColRight h1 {
+.api__title {
     text-decoration: underline;
+}
+
+.image {
+    display: flex;
+}
+
+.social {
+    margin: 0 0 0 1rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
@@ -48,7 +28,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .inColLeft img {
-        margin-left: 1rem;
+    .bio {
+        display: block;
     }
 }
