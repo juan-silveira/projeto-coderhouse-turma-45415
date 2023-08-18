@@ -1,4 +1,4 @@
-.main__card {
+.featuredPkmon {
     margin-top: 3rem;
     background-color: var(--white);
     border-radius: 10px;
@@ -6,7 +6,7 @@
     color: var(--darkGray);
 }
 
-.top__main__card {
+.featuredPkmon__image {
     position: relative;
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@
     font-weight: bold;
 }
 
-.pokeSpotBg {
+.featuredPkmon__imageBg {
     position: relative;
     top: 0;
     left: 0;
@@ -31,19 +31,11 @@
     border-radius: 10px;
 }
 
-.pokeSpotImage {
+.featuredPkmon__imagePkmon {
     position: absolute;
     width: 35vh;
     max-width: 50%;
     transform: translate(1vw, 0vh);
-}
-
-.typeBadge {
-    color: var(--white);
-    font-size: small;
-    font-weight: 400;
-    padding: 5px 10px;
-    border-radius: 20px;
 }
 
 .games {
@@ -53,37 +45,37 @@
     gap: 2rem;
 }
 
-.cards {
+.games__card {
     background-color: var(--white);
     border-radius: 20px 20px 10px 10px;
     gap: 2rem;
     cursor: pointer;
 }
 
-.card__image {
+.games__cardImage {
     object-fit: cover;
     height: 10vh;
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
-.card__body {
+.games__cardBody {
     text-align: center;
     padding: 1rem;
     color: var(--darkGray);
 }
 
-.card__title {
+.games__cardTitle {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-/* .card__text {
+/* .games__cardText {
     margin-top: auto;
 } */
 
-.tbContainer {
+.pkmonTable__container {
     display: flex;
     justify-content: center;
     max-height: 570px;
@@ -91,39 +83,39 @@
     overflow-y: auto;
 }
 
-.table {
+.pkmonTable__table {
     width: 100%;
     margin-top: 1rem;
     background-color: var(--white);
     border-radius: 10px;
 }
 
-.table td {
+.pkmonTable__table td {
     height: 3rem;
     background-color: var(--darkBlue);
 }
 
-.table__header {
+.pkmonTable__thead {
     background-color: var(--darkGray);
 }
 
-.table__header th:first-child {
+.pkmonTable__thead th:first-child {
     border-top-left-radius: 10px;
 }
 
-.table__header th:last-child {
+.pkmonTable__thead th:last-child {
     border-top-right-radius: 10px;
 }
 
-.table__body tr:last-child td:first-child {
+.pkmonTable__tbody tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
 }
 
-.table__body tr:last-child td:last-child {
+.pkmonTable__tbody tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-.table__image {
+.pkmonTable__pkmonImage {
     width: 50px;
 }
 
@@ -140,7 +132,7 @@
         display: block;
     }
 
-    .cards {
+    .games__card {
         margin-top: 2rem;
         width: 100%;
     }
