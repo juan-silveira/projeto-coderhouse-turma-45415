@@ -15,6 +15,13 @@ ul{
     width: 100%;
     z-index: 1;
 }
+
+.header__wrapper {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 /* Logo */
 .header-logo{
     display: inline-block;
