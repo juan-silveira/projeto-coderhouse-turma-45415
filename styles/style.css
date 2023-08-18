@@ -47,7 +47,7 @@ body {
     color: var(--white);
     text-align: center;
     font-size: 10px;
-    position: absolute;
+    position: relative;
     padding: 10px 0;
     bottom: 0;
 }

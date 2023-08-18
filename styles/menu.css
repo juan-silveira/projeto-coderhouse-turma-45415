@@ -16,17 +16,17 @@ ul{
     z-index: 1;
 }
 /* Logo */
-.logo{
+.header-logo{
     display: inline-block;
 }
 
-.logo__image {
+.header__logoImage {
     width: 5rem;
     margin: 10px 10px 0px 10px;
 }
 
 /* Nav menu */
-.nav{
+.header__nav{
     width: 100%;
     height: 100%;
     position: fixed;
@@ -36,37 +36,37 @@ ul{
     max-height: 0;
 }
 
-.nav__menu a{
+.header__navMenu a{
     display: block;
     color: var(--white);
 }
-.nav__menu li{
+.header__navMenu li{
     display: block;
     padding: 10px 15px;
 }
-.nav__menu li:hover{
+.header__navMenu li:hover{
     background-color: var(--white);
 }
 
-.nav__menu li:hover a{
+.header__navMenu li:hover a{
     color: var(--darkGray);
 }
-.nav__menu li.active{
+.header__navMenu li.active{
     background-color: var(--yellow);
 }
-.nav__menu li.active a{
+.header__navMenu li.active a{
     color: var(--blue);
 }
 
 /* Menu Icon */
-.hamburguer{
+.header__hamburguer{
     cursor: pointer;
     float: right;
     transform: translate(-20px, 20px);
     /* position: absolute; */
 }/* Style label tag */
 
-.hamburguer__line {
+.header__hamburguerLine {
     background: var(--white);
     display: block;
     height: 2px;
@@ -75,8 +75,8 @@ ul{
 
 } /* Style span tag */
 
-.hamburguer__line::before,
-.hamburguer__line::after{
+.header__hamburguerLine::before,
+.header__hamburguerLine::after{
     background: var(--white);
     content: '';
     display: block;
@@ -85,36 +85,36 @@ ul{
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamburguer__line::before{
+.header__hamburguerLine::before{
     top: 5px;
 }
-.hamburguer__line::after{
+.header__hamburguerLine::after{
     top: -5px;
 }
 
-.side__menu {
+.header__sideMenu {
     display: none;
 } /* Hide checkbox */
 
 /* Toggle menu icon */
-.side__menu:checked ~ nav{
+.header__sideMenu:checked ~ nav{
     max-height: 100%;
 }
-.side__menu:checked ~ .hamburguer .hamburguer__line {
+.header__sideMenu:checked ~ .header__hamburguer .header__hamburguerLine {
     background: transparent;
 }
-.side__menu:checked ~ .hamburguer .hamburguer__line::before {
+.header__sideMenu:checked ~ .header__hamburguer .header__hamburguerLine::before {
     transform: rotate(-45deg);
     top:0;
 }
-.side__menu:checked ~ .hamburguer .hamburguer__line::after {
+.header__sideMenu:checked ~ .header__hamburguer .header__hamburguerLine::after {
     transform: rotate(45deg);
     top:0;
 }
 
 /* Responsiveness */
 @media (min-width: 815px) {
-    .nav{
+    .header__nav{
         max-height: none;
         top: 0;
         position: relative;
@@ -122,20 +122,20 @@ ul{
         width: fit-content;
         background-color: transparent;
     }
-    .nav__menu li{
+    .header__navMenu li{
         float: left;
     }
-    .nav__menu a:hover{
+    .header__navMenu a:hover{
         background-color: transparent;
         color: var(--gray);
     }
-    .hamburguer{
+    .header__hamburguer{
         display: none;
     }
 }
 
 @media (max-width: 799px) {
-    .nav__menu li{
+    .header__navMenu li{
         margin: 0px;
     }
 }
