@@ -150,3 +150,10 @@ body {
 .type__fire{
     background-color: var(--fire);
 }
+
+@media screen and (max-width: 600px) {
+    .footer__text {
+        margin: auto 1rem;
+    }
+
+}
