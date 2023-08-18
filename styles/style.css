@@ -7,7 +7,7 @@
     --darkGray: #333;
     --gray: #85888C;
     --blue: #395FA9;
-    --yellow: #FFCB05
+    --yellow: #FFCB05;
 
     /* Pokemon Type color variables*/
     --rock: rgb(182, 158, 49);
@@ -67,6 +67,7 @@ body {
 .content {
     padding-bottom: 2.5rem;
     width: 90%;
+    max-width: 1024px;
 }
 
 .d-flex {

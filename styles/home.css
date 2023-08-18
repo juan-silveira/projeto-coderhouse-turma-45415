@@ -71,9 +71,12 @@
     margin-bottom: 1rem;
 }
 
-/* .games__cardText {
-    margin-top: auto;
-} */
+.gameplay__video {
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    width: 85%;
+    height: 32vh;
+}
 
 .pkmonTable__container {
     display: flex;
@@ -134,6 +137,10 @@
 
     .games__card {
         margin-top: 2rem;
+        width: 100%;
+    }
+
+    .gameplay__video {
         width: 100%;
     }
 }
