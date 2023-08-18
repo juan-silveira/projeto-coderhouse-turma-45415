@@ -38,6 +38,19 @@
     transform: translate(1vw, 0vh);
 }
 
+.featuredPkmon__aboutTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.featuredPkmon__name {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 4rem 0 1rem 0;
+}
+
 .games {
     margin-top: 3rem;
     display: grid;
@@ -126,7 +139,7 @@
     text-transform: capitalize;
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 1024px) {
 
     .games,
     .downSection,
@@ -143,6 +156,18 @@
     .gameplay__video {
         width: 100%;
     }
+
+    .d-flex{
+        display: block;
+    }
+
+    .featuredPkmon__name {
+        margin: 1rem 0;
+    }
+    
+    .featuredPkmon__aboutDesc {
+        text-align: justify;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -154,9 +179,8 @@
         display: block;
     }
 
-    .col-2,
-    .col-3,
-    .col-4 {
-        flex: 100%;
+    .footer__text {
+        margin: auto 1rem;
     }
+
 }
