@@ -9,6 +9,7 @@
     <meta name="description" content="Procure seu pokemon favorito, e veja os status dele em nossa pokedex.">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/snackbar.css">
     <link rel="stylesheet" href="../styles/pokedex.css">
     <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -32,7 +33,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./about.html">Sobre</a></li>
                 <li class="active"><a href="./pokedex.html">Pokédex</a></li>
-                <li><a href="./memory.html">Jogo da Memória</a></li>
+                <li><a href="./memory-login.html">Jogo da Memória</a></li>
                 <li><a href="./who.html">Quem é esse Pokémon?</a></li>
             </ul>
             </nav>
@@ -41,9 +42,9 @@
 
     <main class="main">
         <div class="pokedex">
-            <div class="pokedex__header">
+            <div class="pokedex__header" id="pokedexHeader">
                 <button class="button button__prev"><i class="fa fa-arrow-left"></i></button>
-                <form autocomplete="off" class="form">
+                <form autocomplete="off" class="form" id="form">
                     <div class="form__autocomplete">
                         <input class="form__search" type="search" id="search" placeholder="Digite o nome ou id"
                             required />
@@ -52,14 +53,14 @@
                 </form>
                 <button class="button button__next"><i class="fa fa-arrow-right"></i></button>
             </div>
-            <div class="pokedex__body">
+            <div class="pokedex__body" id="pokedexBody">
                 <div class="pokedex__body__top">
                     <div class="pokedex__body__top__info">
-                        <span class="pokedex__body__top__info__pokemonName">Pokeball</span>
-                        <span class="pokedex__body__top__info__pokemonNumber">#???</span>
+                        <span class="pokedex__body__top__info__pokemonName" id="pokemonName">Pokeball</span>
+                        <span class="pokedex__body__top__info__pokemonNumber" id="pokemonNumber">#???</span>
                     </div>
                     <div class="pokedex__image">
-                        <img src="../images/pokeball.jpg" class="pokedex__image__pokemonImage" id="pokemon-image"
+                        <img src="../images/pokeball.jpg" class="pokedex__image__pokemonImage" id="pokemonImage"
                             alt="pokemon-image" />
                     </div>
                 </div>
@@ -87,7 +88,7 @@
                         </div>
                     </div>
 
-                    <div class="pokemon__types">
+                    <div class="pokemon__types" id="pokemonTypes">
                         <span class="pokemon__types__type">
                             ???
                         </span>
@@ -97,7 +98,7 @@
                     </div>
 
                     <div class="stats__body">
-                        <h4 class="stats__body__title">Base Stats</h4>
+                        <h4 class="stats__body__title" id="base-stats">Base Stats</h4>
                         <div class="stats__body__allStats">
                             <div class="d-flex">
                                 <div class="stat__description">HP</div>
@@ -155,10 +156,10 @@
                             </div>
                             <div class="d-flex">
                                 <div class="stat__total">TOTAL</div>
-                                <div class="stat__number">000</div>
+                                <div class="stat__number stat__tnumber">000</div>
                                 <div class="stat__bar">
-                                    <div class="stat__bar__outer"">
-                                        <div class=" stat__bar__inner"></div>
+                                    <div class="stat__bar__outer" id="bar-touter">
+                                        <div class="stat__bar__inner" id="bar-tinner"></div>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +177,8 @@
             <strong>CoderHouse</strong> Brasil
         </p>
     </footer>
-    
+    <div id="snackbar">Pokémon não encontrado!</div>
+    <script src="../scripts/pokedex.js"></script>
 </body>
 
 </html>

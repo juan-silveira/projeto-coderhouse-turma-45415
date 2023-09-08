@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     text-align: center;
 }
@@ -31,20 +31,45 @@
 
 .whoPkm__images__who {
     position: absolute;
-    width: 200px;
-    transform: translateX(-60%);
+    width: 180px;
+    transform: translateX(-50%);
+    filter: brightness(0);
+    transition: filter 500ms ease;
 }
 
-.whoPkm__pkmName {
+.whoPkm__try {
     width: 100%;
-    margin-bottom: 10px ;
+    margin: 10px 0;
 }
 
-.whoPkm__pkmName .input {
+.whoPkm__try .input {
     width: 100%;
     font-size: 24px;
     padding: 10px;
     border-radius: 10px;
+}
+
+.whoPkm__info {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.2rem;
+    color: white;
+    font-size: 24px;
+    text-transform: capitalize;
+    background-color: var(--grass);
+    display: flex;
+    padding: 10px 3rem;
+    border-radius: 10px;
+    max-height: 200px;
+    transition: all 500ms ease;
+}
+
+.hide {
+    margin-top: 0;
+    font-size: 0;
+    padding: 0;
+    max-height: 0;
 }
 
 .whoPkm__dontKnowPkm {
@@ -56,17 +81,30 @@
     width: 100%;
     font-size: 16px;
     padding: 10px;
-    background-color: #ffa500;
     border-radius: 10px;
 }
 
-.whoPkm__tips {
+#who-is {
+    background-color: #ffa500;
+}
+
+#try-again {
+    background-color: var(--blue);
+    color: white;
+    transition: all 500ms ease;
+}
+
+#try-again {
+    display: none;
+}
+
+.whoPkm__buttons {
     display: flex;
     justify-content: space-between;
 
 }
 
-.whoPkm__tips .button {
+.whoPkm__buttons .button {
     width: 30%;
     font-size: 16px;
     padding: 10px;
@@ -77,12 +115,18 @@
     border: 2px solid #fff;
 }
 
+.whoPkm__tips{
+    color: white;
+}
+
+.whoPkm__tips--p1, .whoPkm__tips--p2, .whoPkm__tips--p3{
+    margin-top: 1rem;
+    text-align: start;
+    transition: all 500ms ease;
+}
+
 @media screen and (max-width: 670px) {
 
-    .whoPkm__images__who {
-        position: absolute;
-        width: 30%;
-    }
     .whoPkm__pkmName input {
         padding: auto;
     }    
@@ -90,6 +134,9 @@
 
 @media screen and (max-width: 460px) {
 
+    .whoPkm__images__who {
+        width: 37%;
+    }
     .content__title {
         font-size: 7.4vw;
     }

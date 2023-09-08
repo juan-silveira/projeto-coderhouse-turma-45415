@@ -1,9 +1,9 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 15px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -24,6 +24,7 @@
     background-size: cover;
     background-position: center;
     border-radius: 5px;
+    transition: all 400ms ease;
 }
 
 .front {
@@ -41,18 +42,28 @@
     border: 2px solid var(--blue);
 }
 
-.card:hover {
-    transform: rotateY(180deg);
-}
-
 .name {
     color: var(--white);
     text-align: center;
     transform: translateY(0.5vh);
     font-size: clamp(0.5vh, 2vw, 2vh);
+    text-transform: capitalize;
 }
 
-.nav__bar {
+.image {
+    width: 100%;
+  }
+
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+.scoreboard {
     width: 100%;
     max-width: 800px;
     margin: 0 auto 15px auto;
@@ -95,23 +106,24 @@
     padding: 5px;
 }
 
-@media screen and (max-width: 600px) {
-    .content {
-        scale: 0.95;
-    }
+.bold {
+    font-weight: bold;
+}
 
+@media screen and (max-width: 900px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+        grid-template-columns: repeat(6, 1fr);
     }
+}
 
-    .name {
-        transform: translateY(1vh);
-        font-size: clamp(1vh, 3vw, 2vh);
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media screen and (max-height: 768px) {
+
     .content {
         scale: 0.7;
     }
@@ -121,3 +133,20 @@
         font-size: clamp(1vh, 2vw, 4vh);
     }
 }
+
+@media screen and (max-width: 500px) {
+    .content {
+        scale: 0.95;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .name {
+        transform: translateY(0.5vh);
+        font-size: clamp(1vh, 3vw, 2vh);
+    }
+}
+

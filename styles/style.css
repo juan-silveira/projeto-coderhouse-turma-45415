@@ -129,26 +129,7 @@ body {
 .type__badge {
     padding: .2rem .3rem;
     border-radius: 5px;
-}
-
-.type__water{
-    background-color: var(--water);
-}
-
-.type__grass{
-    background-color: var(--grass);
-}
-
-.type__poison{
-    background-color: var(--poison);
-}
-
-.type__flying{
-    background-color: var(--flying);
-}
-
-.type__fire{
-    background-color: var(--fire);
+    margin: 0 .5rem;
 }
 
 @media screen and (max-width: 600px) {
