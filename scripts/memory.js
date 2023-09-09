@@ -31,7 +31,7 @@ const populateArray = () => {
   // Para cada posição do array, gera um número pseudo-aleatório
   for (let index = 0; index < 10; index++) {
     // O range dos números é de 1 a 150, definidos pela varíavel abaixo
-    rNum = Math.floor(Math.random() * 150) + 1;
+    rNum = Math.floor(Math.random() * 151) + 1;
     // Se um número não existe no array, então inclui
     if (!characters.includes(rNum)) {
       characters[index] = rNum;
@@ -106,7 +106,7 @@ const checkCards = () => {
     // Verifica se o jogo chegou ao fim
     checkEndGame();
 
-  // Senão, após meio segundo, desvira as cartas, removendo a classe "reveal-card"
+    // Senão, após meio segundo, desvira as cartas, removendo a classe "reveal-card"
   } else {
     setTimeout(() => {
 
@@ -135,7 +135,7 @@ const revealCard = ({ target }) => {
     target.parentNode.classList.add('reveal-card');
     firstCard = target.parentNode;
 
-  // Se a variável "secondCard" estiver vazia, então, adicionar a classe "reveal-card" e atribuir à variável card o elemento "card"
+    // Se a variável "secondCard" estiver vazia, então, adicionar a classe "reveal-card" e atribuir à variável card o elemento "card"
   } else if (secondCard === '') {
     target.parentNode.classList.add('reveal-card');
     secondCard = target.parentNode;
@@ -178,10 +178,12 @@ const createCard = (character) => {
   front.appendChild(pkmnName);
   front.appendChild(pkmnImage);
 
- // Quando uma carta receber um clique, revelar a carta
+  // Quando uma carta receber um clique, revelar a carta
   card.addEventListener('click', revealCard);
   // Define o valor do atributo "data-character" com o ID do pokemon
   card.setAttribute('data-character', character)
+  // Escutador de evento para proibir o usuário de clicar com o botão direito do mouse na imagem e ver qual é a imagem do pokemon em outra guia
+  card.addEventListener('contextmenu', event => event.preventDefault());
 
   // Retorna a carta criada
   return card;
@@ -224,7 +226,6 @@ const startTimer = () => {
     timer.innerHTML = currentTime + 1;
     // Executa a função a cada segundo
   }, 1000);
-
 }
 
 // Ao carregar a tela execute...

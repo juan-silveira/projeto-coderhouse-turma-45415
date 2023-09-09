@@ -177,6 +177,9 @@ const createTableRow = (pokemon) => {
     tableCell4.appendChild(pkmnType1);
     tableCell5.appendChild(pkmnType2);
 
+    // Quando uma linha receber um clique, abrir a pokedex com aquele pokemon
+    tableRow.addEventListener('click', handlePokedex);
+
     //Retorna a nova linha
     return tableRow;
 }
@@ -186,9 +189,17 @@ const gottaCatchThemAll = async () => {
     // Variável recebe os dados de todos os pokemons
     const pkData = await fetchJson();
     // Para cada repetição, criar uma linha na tabela, até que atinja o limite do array
-    for (i = 1; i < pkData.pokedex.length; i++) {
+    for (i = 0; i < pkData.pokedex.length; i++) {
         createTableRow(pkData.pokedex[i]);
     }
+}
+
+// Função que monitora clique em alguma linha da tabela de pokemon
+const handlePokedex = ({ target }) => {
+    // Ao clicar em uma linha, grava o id do pokemon no localStorage
+    localStorage.setItem('findPokemon', target.parentNode.parentNode.firstChild.firstChild.innerHTML*1)
+    // Redireciona o usuário para a pagina da Pokedex
+    window.location = 'pages/pokedex.html';
 }
 
 // Quando a tela é carregada, executa a função

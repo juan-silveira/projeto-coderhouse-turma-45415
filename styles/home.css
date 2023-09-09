@@ -115,6 +115,7 @@
 .pkmonTable__table td {
     height: 3rem;
     background-color: var(--darkBlue);
+    cursor: pointer;
 }
 
 .pkmonTable__thead {

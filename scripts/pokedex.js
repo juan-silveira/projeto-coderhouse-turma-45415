@@ -88,7 +88,7 @@ buttonPrev.addEventListener('click', () => {
     if (searchPokemon > 1) {
         searchPokemon -= 1;
         renderPokemon(searchPokemon);
-        document.getElementById('search').value = '';
+        search.value = '';
     }
 });
 
@@ -96,7 +96,7 @@ buttonPrev.addEventListener('click', () => {
 buttonNext.addEventListener('click', () => {
     searchPokemon += 1;
     renderPokemon(searchPokemon);
-    document.getElementById('search').value = '';
+    search.value = '';
 });
 
 // Ativa uma snackbar em caso de não localizar um pokemon
@@ -302,8 +302,23 @@ const pkmnNames = [];
 // Inicia a função autocomplete no input de busca, e percorre o array de possíveis valores para autocompletar
 autocomplete(document.getElementById("search"), pkmnNames);
 
+//Função para exibir na tela um pokemon selecionado na tabela da página Home
+const handleTransfer = () => {
+    // Se existir um id de pokemon armazenado no localStorage, então...
+    if (localStorage.getItem('findPokemon')) {
+        // O input recebe o valor armazenado
+        search.value = localStorage.getItem('findPokemon');
+        // Simula clique no botão de buscar
+        document.querySelector(".button__submit").click();
+        // Apaga a chave usada na busca do localStorage, para evitar que sempre busque o pokemon ao clicar na Pokedex
+        localStorage.removeItem('findPokemon');
+      }  
+}
+
 // Quando a tela é carregada, executa a função
 window.onload = async () => {
+    // Verifica se tem que buscar algum pokemon da tabela da Home
+    handleTransfer();
     // Monta a coleção de dadps de todos os pokemons do JSON na variável
     const pkmnData = await fetchJson();
     // Para cada item do array pokedex, execute a instrução...

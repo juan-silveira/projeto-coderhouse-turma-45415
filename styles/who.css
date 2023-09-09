@@ -63,6 +63,7 @@
     border-radius: 10px;
     max-height: 200px;
     transition: all 500ms ease;
+    cursor: pointer;
 }
 
 .hide {

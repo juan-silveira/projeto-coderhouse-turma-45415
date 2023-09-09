@@ -142,6 +142,14 @@ const resetGame = () => {
     location.reload();
 }
 
+// Função que abre o pokemon na pokedex
+const handlePokedex = () => {
+    // Ao clicar em uma linha, grava o id do pokemon no localStorage
+    localStorage.setItem('findPokemon', whoNumber.innerHTML.replace("#", "")*1)
+    // Redireciona o usuário para a pagina da Pokedex
+    window.location = './pokedex.html';
+  }
+
 // Função que ao carregar a tela, inicia o jogo
 window.onload = () => {
     renderPokemon();
@@ -155,6 +163,8 @@ whoTry.addEventListener('keypress', blockEnterSubmit);
 tryAgain.addEventListener('click', resetGame);
 // Escutador de evento para monitorar se o usuário clicou no botão "Não sei qual é o Pokémon"
 whoIs.addEventListener('click', revealPokemon);
+// Escutador de evento para monitorar se o usuário clicou na barra com o nome e id do pokemon
+whoTopBar.addEventListener('click', handlePokedex);
 // Escutador de evento para monitorar se o usuário clicou em algum botão de dica
 tipButton1.addEventListener('click', revealTip1);
 tipButton2.addEventListener('click', revealTip2);
