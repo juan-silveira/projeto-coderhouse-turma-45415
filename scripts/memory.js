@@ -146,7 +146,7 @@ const revealCard = ({ target }) => {
 
 // Função para consultar o arquivo pokedex.json e retornar um array de objetos com todosos atributos dos 1010 pokemons
 const fetchJson = async () => {
-  const response = await fetch('../files/pokedex.json');
+  const response = await fetch('https://juan-silveira.github.io/projeto-coderhouse-turma-45415/files/pokedex.json');
 
   // Se a resposta da API for SUCESSO, então grave o resultado na variável e retorne a variável
   if (response.status === 200) {

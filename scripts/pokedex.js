@@ -64,7 +64,7 @@ const fetchApi = async (pkmnName) => {
 
 // Faz a chamada no arquivo JSON, retorna os dados de todos os pokemons
 const fetchJson = async () => {
-    const response = await fetch("../files/pokedex.json");
+    const response = await fetch("https://juan-silveira.github.io/projeto-coderhouse-turma-45415/files/pokedex.json");
 
     if (response.status === 200) {
         const pkmnData = await response.json();
