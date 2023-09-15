@@ -24,19 +24,19 @@
     <header class="header">
         <div class="header__wrapper">
             <!-- Logo -->
-        <a href="#" class="header__logo"><img class="header__logoImage" src="../images/logo.svg" alt="logo"></a>
-        <!-- Hamburger icon -->
-        <input class="header__sideMenu" type="checkbox" id="side-menu"/>
-        <label class="header__hamburguer" for="side-menu"><span class="header__hamburguerLine"></span></label>
-        <!-- Menu -->
-        <nav class="header__nav">
-            <ul class="header__navMenu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./about.html">Sobre</a></li>
-                <li><a href="./pokedex.html">Pokédex</a></li>
-                <li><a href="./memory.html">Jogo da Memória</a></li>
-                <li class="active"><a href="./who.html">Quem é esse Pokémon?</a></li>
-            </ul>
+            <a href="#" class="header__logo"><img class="header__logoImage" src="../images/logo.svg" alt="logo"></a>
+            <!-- Hamburger icon -->
+            <input class="header__sideMenu" type="checkbox" id="side-menu" />
+            <label class="header__hamburguer" for="side-menu"><span class="header__hamburguerLine"></span></label>
+            <!-- Menu -->
+            <nav class="header__nav">
+                <ul class="header__navMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./about.html">Sobre</a></li>
+                    <li><a href="./pokedex.html">Pokédex</a></li>
+                    <li><a href="./memory-login.html">Jogo da Memória</a></li>
+                    <li class="active"><a href="./who.html">Quem é esse Pokémon?</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -45,20 +45,31 @@
         <div class="content">
             <span class="content__title"><strong>Quem é esse Pokémon?</strong></span>
             <div class="whoPkm">
-                <div class="whoPkm__images">
-                    <img class="whoPkm__images__whobg" src="../images/whobg.png" alt="who">
-                    <img class="whoPkm__images__who" src="../images/who.png" alt="?">
-                </div>
-                <form class="whoPkm__pkmName" action="">
-                    <input class="input" type="text" placeholder="Digite o nome do Pokémon">
+                    <div class="whoPkm__images">
+                        <img draggable="false" class="whoPkm__images__whobg" src="../images/whobg.png" alt="who-bg">
+                        <img draggable="false" class="whoPkm__images__who" id="pkmImage" src="../images/who.png"
+                            alt="who-image">
+                    </div>
+                    <div class="whoPkm__info hide">
+                        <span id="pkmName"></span>
+                        <span id="pkmNumber"></span>
+                    </div>
+                <form class="whoPkm__try" action="">
+                    <input class="input" id="pkmTry" type="text" placeholder="Digite o nome do Pokémon">
                 </form>
                 <div class="whoPkm__dontKnowPkm">
-                    <button class="button">Não sei qual é o pokemon!</button>
+                    <button class="button" id="who-is">Não sei qual é o pokemon!</button>
+                    <button class="button" id="try-again">Tentar novamente</button>
+                </div>
+                <div class="whoPkm__buttons">
+                    <button class="button" id="tip1">Dica 1</button>
+                    <button class="button" id="tip2">Dica 2</button>
+                    <button class="button" id="tip3">Dica 3</button>
                 </div>
                 <div class="whoPkm__tips">
-                    <button class="button">Dica 1</button>
-                    <button class="button">Dica 2</button>
-                    <button class="button">Dica 3</button>
+                    <p class="whoPkm__tips--p1 hide"></p>
+                    <p class="whoPkm__tips--p2 hide"></p>
+                    <p class="whoPkm__tips--p3 hide"></p>
                 </div>
             </div>
         </div>
@@ -66,11 +77,14 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text">Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
-                target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
+        <p class="footer__text">Desenvolvido pelo <a
+                href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415" target="_blank">Grupo 1</a> da
+            turma 45415 do curso de Desenvolvimento Web da
             <strong>CoderHouse</strong> Brasil
         </p>
     </footer>
+
+    <script src="../scripts/who.js"></script>
 
 </body>
 

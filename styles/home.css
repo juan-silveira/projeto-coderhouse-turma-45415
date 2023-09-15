@@ -33,7 +33,7 @@
 
 .featuredPkmon__imagePkmon {
     position: absolute;
-    width: 35vh;
+    width: 30vh;
     max-width: 50%;
     transform: translate(1vw, 0vh);
 }
@@ -51,6 +51,11 @@
     margin: 4rem 0 1rem 0;
 }
 
+.featuredPkmon__aboutDesc {
+    margin: 0 2rem;
+    text-align: justify;
+}
+
 .games {
     margin-top: 3rem;
     display: grid;
@@ -62,7 +67,7 @@
     background-color: var(--white);
     border-radius: 20px 20px 10px 10px;
     gap: 2rem;
-    cursor: pointer;
+    height: 100%;
 }
 
 .games__cardImage {
@@ -92,16 +97,16 @@
 }
 
 .pkmonTable__container {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    max-height: 570px;
+    max-height: 1044px;
     overflow-x: auto;
     overflow-y: auto;
 }
 
 .pkmonTable__table {
     width: 100%;
-    margin-top: 1rem;
     background-color: var(--white);
     border-radius: 10px;
 }
@@ -109,6 +114,7 @@
 .pkmonTable__table td {
     height: 3rem;
     background-color: var(--darkBlue);
+    cursor: pointer;
 }
 
 .pkmonTable__thead {
@@ -157,16 +163,22 @@
         width: 100%;
     }
 
-    .d-flex{
+    .d-flex {
         display: block;
     }
 
-    .featuredPkmon__name {
+    .featuredPkmon__name,
+    #types {
         margin: 1rem 0;
     }
-    
+
     .featuredPkmon__aboutDesc {
-        text-align: justify;
+        margin: 0 1rem;
+    }
+
+    .pkmonTable__container {
+        justify-content: start;
+        max-height: 560px;
     }
 }
 

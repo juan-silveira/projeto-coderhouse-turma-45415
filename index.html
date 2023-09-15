@@ -48,62 +48,59 @@
                         <p class="title">Pokémon em destaque:</p>
                         <div class="featuredPkmon__image">
                             <img class="featuredPkmon__imageBg" src="images/spotBg.svg" alt="image background">
-                            <img class="featuredPkmon__imagePkmon" id="pokeImage"
-                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+                            <img class="featuredPkmon__imagePkmon" id="pokeImage" src="./images/pokeball.png"
                                 alt="spot pokemon">
                         </div>
                     </div>
                     <div class="featuredPkmon__about col-2">
                         <div class="mt-2 col-2">
-                            <p class="featuredPkmon__name">Charmander</p>
+                            <p class="featuredPkmon__name" id="pokeName"></p>
                             <p class="featuredPkmon__aboutTitle">Sobre:</p>
-                            <p id="pokeDesc" class="featuredPkmon__aboutDesc">
-                                A chama que queima na ponta de sua cauda é uma indicação de suas emoções. A chama oscila
-                                quando CHARMANDER está se divertindo. Se o POKéMON ficar enfurecido, a chama queima
-                                ferozmente.
-                            </p>
+                            <p id="pokeDesc" class="featuredPkmon__aboutDesc"></p>
                         </div>
-                        <div class="featuredPkmon__type mt-2 text-center col-2">
-                            <button id="alertButton">Clique para ver o alert uma única vez</button>
+                        <div class="featuredPkmon__type mt-2 text-center col-2" id="types">
                             <p class="featuredPkmon__aboutTitle">Tipo:</p>
-                            <span class="featuredPkmon__typeBadge type__badge type__fire text-white">FOGO</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="games">
+                <a href="/pages/pokedex.html" class="card">
+                    <div class="games__card games__card--pokedex" id="cardPokedex">
+                        <div class="games__cardHeader">
+                            <img class="games__cardImage" src="images/pokedex.jpg" alt="pokedex">
+                        </div>
+                        <div class="games__cardBody">
+                            <div class="games__cardTitle">Pokédex</div>
+                            <div class="games__cardText">Veja os dados completos dos Pokémons!</div>
+                        </div>
+                    </div>
+                </a>
 
-                <div class="games__card games__card--pokedex" id="cardPokedex">
-                    <div class="games__cardHeader">
-                        <img class="games__cardImage" src="images/pokedex.jpg" alt="pokedex">
+                <a href="/pages/memory-login.html" class="card">
+                    <div class="games__card games__card--memory" id="cardMemory">
+                        <div class="games__cardHeader">
+                            <img class="games__cardImage" src="images/memory.jpg" alt="memory">
+                        </div>
+                        <div class="games__cardBody">
+                            <div class="games__cardTitle">Jogo da memória</div>
+                            <div class="games__cardText">Teste sua memoria com este jogo!</div>
+                        </div>
                     </div>
-                    <div class="games__cardBody">
-                        <div class="games__cardTitle">Pokédex</div>
-                        <div class="games__cardText">Veja os dados completos dos Pokémons!</div>
-                    </div>
-                </div>
+                </a>
 
-                <div class="games__card games__card--memory" id="cardMemory">
-                    <div class="games__cardHeader">
-                        <img class="games__cardImage" src="images/memory.jpg" alt="memory">
+                <a href="/pages/who.html" class="card">
+                    <div class="games__card games__card--who" id="cardWho">
+                        <div class="games__cardHeader">
+                            <img class="games__cardImage" src="images/who.jpg" alt="who">
+                        </div>
+                        <div class="games__cardBody">
+                            <div class="games__cardTitle">Quem é este Pokémon?</div>
+                            <div class="games__cardText">Adivinhe qual é o Pokémon!</div>
+                        </div>
                     </div>
-                    <div class="games__cardBody">
-                        <div class="games__cardTitle">Jogo da memória</div>
-                        <div class="games__cardText">Teste sua memoria com este jogo!</div>
-                    </div>
-                </div>
-
-                <div class="games__card games__card--who" id="cardWho">
-                    <div class="games__cardHeader">
-                        <img class="games__cardImage" src="images/who.jpg" alt="who">
-                    </div>
-                    <div class="games__cardBody">
-                        <div class="games__cardTitle">Quem é este Pokémon?</div>
-                        <div class="games__cardText">Adivinhe qual é o Pokémon!</div>
-                    </div>
-                </div>
-
+                </a>
             </div>
 
             <div class="containergameplayTable downSection d-flex my-2 text-white text-center">
@@ -123,7 +120,7 @@
 
                 <div class="pkmonTable col-2">
                     <p class="title">Lista de Pokémons</p>
-                    <p>Geração 1 (151 Pokemons)</p>
+                    <p>Total: (1010 Pokemons)</p>
                     <div class="pkmonTable__container">
                         <table class="pkmonTable__table">
                             <thead>
@@ -135,89 +132,7 @@
                                     <th>Tipo 2</th>
                                 </tr>
                             </thead>
-                            <tbody class="pkmonTable__tbody">
-                                <tr>
-                                    <td>001</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/1.png"
-                                            alt="001"></td>
-                                    <td>Bulbasaur</td>
-                                    <td><span class="type__badge type__grass">Grama</span></td>
-                                    <td><span class="type__badge type__poison">Veneno</span></td>
-                                </tr>
-                                <tr>
-                                    <td>002</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/2.png"
-                                            alt="002"></td>
-                                    <td>Ivysaur</td>
-                                    <td><span class="type__badge type__grass">Grama</span></td>
-                                    <td><span class="type__badge type__poison">Veneno</span></td>
-                                </tr>
-                                <tr>
-                                    <td>003</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/3.png"
-                                            alt="003"></td>
-                                    <td>Venusaur</td>
-                                    <td><span class="type__badge type__grass">Grama</span></td>
-                                    <td><span class="type__badge type__poison">Veneno</span></td>
-                                </tr>
-                                <tr>
-                                    <td>004</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/4.png"
-                                            alt="004"></td>
-                                    <td>Charmander</td>
-                                    <td><span class="type__badge type__fire">Fogo</span></td>
-                                    <td><span></span></td>
-                                </tr>
-                                <tr>
-                                    <td>005</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/5.png"
-                                            alt="005"></td>
-                                    <td>Charmeleon</td>
-                                    <td><span class="type__badge type__fire">Fogo</span></td>
-                                    <td><span></span></td>
-                                </tr>
-                                <tr>
-                                    <td>006</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/6.png"
-                                            alt="006"></td>
-                                    <td>Charizard</td>
-                                    <td><span class="type__badge type__fire">Fogo</span></td>
-                                    <td><span class="type__badge type__flying">Voador</span></td>
-                                </tr>
-                                <tr>
-                                    <td>007</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/7.png"
-                                            alt="007"></td>
-                                    <td>Squirtle</td>
-                                    <td><span class="type__badge type__water">Água</span></td>
-                                    <td><span></span></td>
-                                </tr>
-                                <tr>
-                                    <td>008</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/8.png"
-                                            alt="008"></td>
-                                    <td>Wartortle</td>
-                                    <td><span class="type__badge type__water">Água</span></td>
-                                    <td><span></span></td>
-                                </tr>
-                                <tr>
-                                    <td>009</td>
-                                    <td><img class="pkmonTable__pkmonImage"
-                                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/9.png"
-                                            alt="009"></td>
-                                    <td>Blastoise</td>
-                                    <td><span class="type__badge type__water">Água</span></td>
-                                    <td><span></span></td>
-                                </tr>
-                            </tbody>
+                            <tbody class="pkmonTable__tbody"></tbody>
                         </table>
                     </div>
                 </div>
@@ -226,8 +141,9 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text">Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
-                target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
+        <p class="footer__text">Desenvolvido pelo <a
+                href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415" target="_blank">Grupo 1</a> da
+            turma 45415 do curso de Desenvolvimento Web da
             <strong>CoderHouse</strong> Brasil
         </p>
     </footer>
