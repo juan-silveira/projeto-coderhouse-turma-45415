@@ -163,6 +163,10 @@
         width: 100%;
     }
 
+    .gameplay{
+        margin-right: 0;
+    }
+
     .gameplay__video {
         width: 100%;
     }
