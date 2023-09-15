@@ -67,7 +67,7 @@
     background-color: var(--white);
     border-radius: 20px 20px 10px 10px;
     gap: 2rem;
-    cursor: pointer;
+    height: 100%;
 }
 
 .games__cardImage {
@@ -107,7 +107,6 @@
 
 .pkmonTable__table {
     width: 100%;
-    margin-top: 1rem;
     background-color: var(--white);
     border-radius: 10px;
 }

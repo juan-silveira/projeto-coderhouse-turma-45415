@@ -1,18 +1,3 @@
-// Cria um redirecionamento para a página Pokédex ao clicar no card
-document.getElementById("cardPokedex").onclick = (() => {
-    window.location = 'pages/pokedex.html';
-});
-
-// Cria um redirecionamento para a página de login do jogo de memória ao clicar no card
-document.getElementById("cardMemory").onclick = (() => {
-    window.location = 'pages/memory-login.html';
-});
-
-// Cria um redirecionamento para a página Quem é esse pokémon ao clicar no card
-document.getElementById("cardWho").onclick = (() => {
-    window.location = 'pages/who.html';
-});
-
 // Cria um array de objetos com as cores para os span de tipos de pokemon e traduções 
 const type = {
     "rock": { "color": [182, 158, 49], "trad": "pedra" },

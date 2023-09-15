@@ -48,8 +48,7 @@
                         <p class="title">Pokémon em destaque:</p>
                         <div class="featuredPkmon__image">
                             <img class="featuredPkmon__imageBg" src="images/spotBg.svg" alt="image background">
-                            <img class="featuredPkmon__imagePkmon" id="pokeImage"
-                                src="./images/pokeball.png"
+                            <img class="featuredPkmon__imagePkmon" id="pokeImage" src="./images/pokeball.png"
                                 alt="spot pokemon">
                         </div>
                     </div>
@@ -67,37 +66,41 @@
             </div>
 
             <div class="games">
+                <a href="/pages/pokedex.html" class="card">
+                    <div class="games__card games__card--pokedex" id="cardPokedex">
+                        <div class="games__cardHeader">
+                            <img class="games__cardImage" src="images/pokedex.jpg" alt="pokedex">
+                        </div>
+                        <div class="games__cardBody">
+                            <div class="games__cardTitle">Pokédex</div>
+                            <div class="games__cardText">Veja os dados completos dos Pokémons!</div>
+                        </div>
+                    </div>
+                </a>
 
-                <div class="games__card games__card--pokedex" id="cardPokedex">
-                    <div class="games__cardHeader">
-                        <img class="games__cardImage" src="images/pokedex.jpg" alt="pokedex">
+                <a href="/pages/memory-login.html" class="card">
+                    <div class="games__card games__card--memory" id="cardMemory">
+                        <div class="games__cardHeader">
+                            <img class="games__cardImage" src="images/memory.jpg" alt="memory">
+                        </div>
+                        <div class="games__cardBody">
+                            <div class="games__cardTitle">Jogo da memória</div>
+                            <div class="games__cardText">Teste sua memoria com este jogo!</div>
+                        </div>
                     </div>
-                    <div class="games__cardBody">
-                        <div class="games__cardTitle">Pokédex</div>
-                        <div class="games__cardText">Veja os dados completos dos Pokémons!</div>
-                    </div>
-                </div>
+                </a>
 
-                <div class="games__card games__card--memory" id="cardMemory">
-                    <div class="games__cardHeader">
-                        <img class="games__cardImage" src="images/memory.jpg" alt="memory">
+                <a href="/pages/who.html" class="card">
+                    <div class="games__card games__card--who" id="cardWho">
+                        <div class="games__cardHeader">
+                            <img class="games__cardImage" src="images/who.jpg" alt="who">
+                        </div>
+                        <div class="games__cardBody">
+                            <div class="games__cardTitle">Quem é este Pokémon?</div>
+                            <div class="games__cardText">Adivinhe qual é o Pokémon!</div>
+                        </div>
                     </div>
-                    <div class="games__cardBody">
-                        <div class="games__cardTitle">Jogo da memória</div>
-                        <div class="games__cardText">Teste sua memoria com este jogo!</div>
-                    </div>
-                </div>
-
-                <div class="games__card games__card--who" id="cardWho">
-                    <div class="games__cardHeader">
-                        <img class="games__cardImage" src="images/who.jpg" alt="who">
-                    </div>
-                    <div class="games__cardBody">
-                        <div class="games__cardTitle">Quem é este Pokémon?</div>
-                        <div class="games__cardText">Adivinhe qual é o Pokémon!</div>
-                    </div>
-                </div>
-
+                </a>
             </div>
 
             <div class="containergameplayTable downSection d-flex my-2 text-white text-center">
@@ -138,8 +141,9 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text">Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
-                target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
+        <p class="footer__text">Desenvolvido pelo <a
+                href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415" target="_blank">Grupo 1</a> da
+            turma 45415 do curso de Desenvolvimento Web da
             <strong>CoderHouse</strong> Brasil
         </p>
     </footer>
