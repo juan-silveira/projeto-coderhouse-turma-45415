@@ -131,6 +131,8 @@ const createTableRow = (pokemon) => {
     const pkmnType1 = document.createElement('span');
     const pkmnType2 = document.createElement('span');
 
+    // Atribui uma nova classe
+    pokeTable.classList.add("table-text");
     // Define o id do pokemon no html
     pkmnId.innerHTML = pokemon.id.toString().padStart(3, '0');
     // Define a imagem do pokemon no html

@@ -57,6 +57,7 @@ body {
 }
 
 .main {
+    background-image: url(../images/bg-simple.png);
     display: flex;
     position: relative;
     min-height: calc(100vh - 46px);
