@@ -40,8 +40,8 @@
     </header>
 
     <main class="main">
+        <img class="initial__bg" src="images/bg-simple.jpg" alt="bg-image">
         <div class="content">
-
             <div class="featuredPkmon">
                 <div class="d-flex text-center">
                     <div class="col-2">
@@ -54,7 +54,15 @@
                     </div>
                     <div class="featuredPkmon__about col-2">
                         <div class="mt-2 col-2">
-                            <p class="featuredPkmon__name" id="pokeName"></p>
+                            <p class="featuredPkmon__info">
+                                <span class="featuredPkmon__name" id="pokeName"></span>
+                                <span class="featuredPkmon__name" id="pokeId"></span>
+
+                            </p>
+                            <a href="pages/pokedex.html" target="_blank" id="pokedexId" class="btn">
+                                <span>Abrir na Pokédex</span>
+                                <img class="featuredPkmon__pokedexBtn" src="images/pokedex.png" alt="pokedex">
+                            </a>
                             <p class="featuredPkmon__aboutTitle">Sobre:</p>
                             <p id="pokeDesc" class="featuredPkmon__aboutDesc"></p>
                         </div>

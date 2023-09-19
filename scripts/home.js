@@ -70,6 +70,13 @@ const createSpotPokemon = async (id) => {
     pkmnImage.src = pokemon.image;
     // Define o nome do pokemon no html
     pkmnName.innerHTML = pokemon.name;
+    // Define o id do pokemon no html
+    document.getElementById("pokeId").innerHTML = "(#" + pokemon.id + ")";
+    // Quando uma linha receber um clique, abrir a pokedex com aquele pokemon
+    document.getElementById("pokedexId").addEventListener('click', () => {
+        // Ao clicar em uma linha, grava o id do pokemon no localStorage
+        localStorage.setItem('findPokemon', pokemon.id)
+    });
     // Define a descrição do pokemon no html
     pkmnDesc.innerHTML = pokemon.description;
     // Define o tipo principal traduzido do pokemon no html
@@ -182,7 +189,7 @@ const gottaCatchThemAll = async () => {
 // Função que monitora clique em alguma linha da tabela de pokemon
 const handlePokedex = ({ target }) => {
     // Ao clicar em uma linha, grava o id do pokemon no localStorage
-    localStorage.setItem('findPokemon', target.parentNode.parentNode.firstChild.firstChild.innerHTML*1)
+    localStorage.setItem('findPokemon', target.parentNode.parentNode.firstChild.firstChild.innerHTML * 1)
     // Redireciona o usuário para a pagina da Pokedex
     window.location = 'pages/pokedex.html';
 }
