@@ -106,7 +106,7 @@
     margin-bottom: 1rem;
 }
 
-.gameplay{
+.gameplay {
     margin-right: 2rem;
 }
 
@@ -129,7 +129,9 @@
 .pkmonTable__table {
     width: 100%;
     background-color: var(--white);
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    table-layout: fixed;
+    /* border-collapse: collapse; */
 }
 
 .pkmonTable__table td {
@@ -140,15 +142,17 @@
 
 .pkmonTable__thead {
     background-color: var(--darkGray);
+    position: sticky;
+    top: 0;
 }
 
-.pkmonTable__thead th:first-child {
+/* .pkmonTable__thead th:first-child {
     border-top-left-radius: 10px;
 }
 
 .pkmonTable__thead th:last-child {
     border-top-right-radius: 10px;
-}
+} */
 
 .pkmonTable__tbody tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
@@ -180,7 +184,7 @@
         width: 100%;
     }
 
-    .gameplay{
+    .gameplay {
         margin-right: 0;
     }
 
